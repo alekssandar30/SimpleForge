@@ -12,6 +12,24 @@
         $("#newBucketKey").focus();
     })
 
+    /*BackgroundBtn.prototype.load = function () {
+        alert('MyAwesomeExtension is loaded!');
+
+        var viewer = this.viewer;
+
+        var lockBtn = document.getElementById('BackgroundBtnLock');
+        lockBtn.addEventListener('click', function () {
+            viewer.setNavigationLock(true);
+        });
+
+        var unlockBtn = document.getElementById('BackgroundBtnUnlock');
+        unlockBtn.addEventListener('click', function () {
+            viewer.setNavigationLock(false);
+        });
+
+        return true;
+    };*/
+
     $('#hiddenUploadField').change(function () {
         var node = $('#appBuckets').jstree(true).get_selected(true)[0];
         var _this = this;

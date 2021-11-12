@@ -33,8 +33,8 @@ namespace forgeSample.Controllers
                 JobPayloadItem.ViewsEnum._3d
                 })
             };
-            JobPayload job;
-            job = new JobPayload(new JobPayloadInput(objModel.objectName), new JobPayloadOutput(outputs));
+ 
+            JobPayload job = new JobPayload(new JobPayloadInput(objModel.objectName), new JobPayloadOutput(outputs));
 
             // start the translation
             DerivativesApi derivative = new DerivativesApi();

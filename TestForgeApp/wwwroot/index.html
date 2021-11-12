@@ -53,6 +53,8 @@
             </div>
             <div class="col-sm-8 fill">
                 <div id="forgeViewer"></div>
+                <!--<button id="BackgroundBtnLock">Lock it!</button>-->
+                <!--<button id="BackgroundBtnUnlock">Unloock it!</button>-->
             </div>
         </div>
     </div>
@@ -60,30 +62,30 @@
         <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden" />
     </form>
     <!-- Modal Create Bucket -->
-    <div class="modal fade" id="createBucketModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">Create new bucket</h4>
+                <div class="modal fade" id="createBucketModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Create new bucket</h4>
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" id="newBucketKey" class="form-control"> For demonstration purposes, objects (files)
+                                are NOT automatically translated. After you upload, right click on
+                                the object and select "Translate". Note: Technically your bucket name is required to be globally unique across
+                                the entire platform - to keep things simple with this tutorial your client ID will be prepended by default to
+                                your bucket name and in turn masked by the UI so you only have to make sure your bucket name is unique within
+                                your current Forge app.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" id="createNewBucket">Go ahead, create the bucket</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <input type="text" id="newBucketKey" class="form-control"> For demonstration purposes, objects (files)
-                    are NOT automatically translated. After you upload, right click on
-                    the object and select "Translate". Note: Technically your bucket name is required to be globally unique across
-                    the entire platform - to keep things simple with this tutorial your client ID will be prepended by default to
-                    your bucket name and in turn masked by the UI so you only have to make sure your bucket name is unique within
-                    your current Forge app.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" id="createNewBucket">Go ahead, create the bucket</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
