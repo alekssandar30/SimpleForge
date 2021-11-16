@@ -1,11 +1,14 @@
 ﻿using Autodesk.Forge;
 using Autodesk.Forge.Model;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using TestForgeApp.Helpers;
+using TestForgeApp.Models;
+using TestForgeApp.Models.dto;
 
 namespace forgeSample.Controllers
 {
@@ -16,7 +19,7 @@ namespace forgeSample.Controllers
     {
         private IWebHostEnvironment _env;
         public OSSController(IWebHostEnvironment env) { _env = env; }
-        public string ClientId { get { return OAuthController.GetAppSetting("FORGE_CLIENT_ID").ToLower(); } }
+        public string ClientId { get { return AppSettings.GetAppSetting("FORGE_CLIENT_ID").ToLower(); } }
 
         /// <summary>
         /// Return list of buckets (id=#) or list of objects (id=bucketKey)
@@ -48,30 +51,12 @@ namespace forgeSample.Controllers
                 var objectsList = await objects.GetObjectsAsync(id, 100);
                 foreach (KeyValuePair<string, dynamic> objInfo in new DynamicDictionaryItems(objectsList.items))
                 {
-                    nodes.Add(new TreeNode(Base64Encode((string)objInfo.Value.objectId),
+                    nodes.Add(new TreeNode(Base64.Base64Encode((string)objInfo.Value.objectId),
                       objInfo.Value.objectKey, "object", false));
                 }
             }
+
             return nodes;
-        }
-
-        /// <summary>
-        /// Model data for jsTree used on GetOSSAsync
-        /// </summary>
-        public class TreeNode
-        {
-            public TreeNode(string id, string text, string type, bool children)
-            {
-                this.id = id;
-                this.text = text;
-                this.type = type;
-                this.children = children;
-            }
-
-            public string id { get; set; }
-            public string text { get; set; }
-            public string type { get; set; }
-            public bool children { get; set; }
         }
 
         /// <summary>
@@ -87,14 +72,6 @@ namespace forgeSample.Controllers
             PostBucketsPayload bucketPayload = new PostBucketsPayload(string.Format("{0}-{1}", ClientId, bucket.bucketKey.ToLower()), null,
               PostBucketsPayload.PolicyKeyEnum.Persistent);
             return await buckets.CreateBucketAsync(bucketPayload, "US");
-        }
-
-        /// <summary>
-        /// Input model for CreateBucket method
-        /// </summary>
-        public class CreateBucketModel
-        {
-            public string bucketKey { get; set; }
         }
 
         /// <summary>
@@ -131,19 +108,14 @@ namespace forgeSample.Controllers
             return uploadedObj;
         }
 
-        public class UploadFile
-        {
-            public string bucketKey { get; set; }
-            public IFormFile fileToUpload { get; set; }
-        }
-
         /// <summary>
-        /// Base64 enconde a string
+        /// Delete a bucket by id
         /// </summary>
-        public static string Base64Encode(string plainText)
+        /*[HttpDelete]
+        [Route("api/forge/oss/buckets/{bucketKey:string}")]
+        public async Task DeleteBucketById(string bucketKey)
         {
-            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
-            return System.Convert.ToBase64String(plainTextBytes);
-        }
+
+        }*/
     }
 }
