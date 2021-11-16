@@ -3,7 +3,8 @@
 function launchViewer(urn) {
     var options = {
         env: 'AutodeskProduction',
-        getAccessToken: getForgeToken
+        getAccessToken: getForgeToken,
+        api: 'derivativeV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : '')
     };
 
     Autodesk.Viewing.Initializer(options, () => {
@@ -22,6 +23,7 @@ function launchViewer(urn) {
 }
 
 function onDocumentLoadSuccess(doc) {
+    // var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     var viewables = doc.getRoot().getDefaultGeometry();
     viewer.loadDocumentNode(doc, viewables).then(i => {
         // documented loaded, any action?

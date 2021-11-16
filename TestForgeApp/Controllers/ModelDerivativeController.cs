@@ -3,6 +3,7 @@ using Autodesk.Forge.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using TestForgeApp.Models.dto;
 
 namespace forgeSample.Controllers
 {
@@ -40,16 +41,8 @@ namespace forgeSample.Controllers
             DerivativesApi derivative = new DerivativesApi();
             derivative.Configuration.AccessToken = oauth.access_token;
             dynamic jobPosted = await derivative.TranslateAsync(job);
-            return jobPosted;
-        }
 
-        /// <summary>
-        /// Model for TranslateObject method
-        /// </summary>
-        public class TranslateObjectModel
-        {
-            public string bucketKey { get; set; }
-            public string objectName { get; set; }
+            return jobPosted;
         }
     }
 }

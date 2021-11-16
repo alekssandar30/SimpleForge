@@ -1,4 +1,43 @@
 ﻿$(document).ready(function () {
+
+    // first, check if current visitor is signed in
+    /*jQuery.ajax({
+        url: '/api/forge/oauth/token',
+        success: function (res) {
+            // yes, it is signed in...
+            $('#signOut').show();
+            $('#refreshHubs').show();
+
+            // prepare sign out
+            $('#signOut').click(function () {
+                $('#hiddenFrame').on('load', function (event) {
+                    location.href = '/api/forge/oauth/signout';
+                });
+                $('#hiddenFrame').attr('src', 'https://accounts.autodesk.com/Authentication/LogOut');
+                // learn more about this signout iframe at
+                // https://forge.autodesk.com/blog/log-out-forge
+            })
+
+            // and refresh button
+            $('#refreshHubs').click(function () {
+                $('#userHubs').jstree(true).refresh();
+            });
+
+            // finally:
+            prepareUserHubsTree();
+            showUser();
+        }
+    });
+
+    $('#autodeskSigninButton').click(function () {
+        jQuery.ajax({
+            url: '/api/forge/oauth/url',
+            success: function (url) {
+                location.href = url;
+            }
+        });
+    })*/
+
     prepareAppBucketTree();
     $('#refreshBuckets').click(function () {
         $('#appBuckets').jstree(true).refresh();
@@ -11,6 +50,87 @@
     $('#createBucketModal').on('shown.bs.modal', function () {
         $("#newBucketKey").focus();
     })
+
+    const resizeData = {
+        tracking: false,
+        startWidth: null,
+        startCursorScreenX: null,
+        handleWidth: 10,
+        resizeTarget: null,
+        parentElement: null,
+        maxWidth: null
+    };
+
+    const selectTarget = (fromElement, selector) => {
+        if (!(fromElement instanceof HTMLElement)) {
+            return null;
+        }
+
+        return fromElement.querySelector(selector);
+    };
+
+    $(document.body).on("mousedown", ".resize-handle--x", null, (event) => {
+        if (event.button !== 0) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const handleElement = event.currentTarget;
+
+        if (!handleElement.parentElement) {
+            console.error(new Error("Parent element not found."));
+            return;
+        }
+
+        // Use the target selector on the handle to get the resize target.
+        const targetSelector = handleElement.getAttribute("data-target");
+        const targetElement = selectTarget(
+            handleElement.parentElement,
+            targetSelector
+        );
+
+        if (!targetElement) {
+            console.error(new Error("Resize target element not found."));
+            return;
+        }
+
+        resizeData.startWidth = $(targetElement).outerWidth();
+        resizeData.startCursorScreenX = event.screenX;
+        resizeData.resizeTarget = targetElement;
+        resizeData.parentElement = handleElement.parentElement;
+        resizeData.maxWidth =
+            $(handleElement.parentElement).innerWidth() - resizeData.handleWidth;
+        resizeData.tracking = true;
+
+        console.log("tracking started");
+    });
+
+    $(window).on(
+        "mousemove",
+        null,
+        null,
+        _.debounce((event) => {
+            if (resizeData.tracking) {
+                const cursorScreenXDelta = event.screenX - resizeData.startCursorScreenX;
+                const newWidth = Math.min(
+                    resizeData.startWidth + cursorScreenXDelta,
+                    resizeData.maxWidth
+                );
+
+                $(resizeData.resizeTarget).outerWidth(newWidth);
+            }
+        }, 1)
+    );
+
+    $(window).on("mouseup", null, null, (event) => {
+        if (resizeData.tracking) {
+            resizeData.tracking = false;
+
+            console.log("tracking stopped");
+        }
+    });
 
     /*BackgroundBtn.prototype.load = function () {
         alert('MyAwesomeExtension is loaded!');
@@ -29,6 +149,35 @@
 
         return true;
     };*/
+
+
+    var element = document.getElementById('resizable');
+    if (element) {
+        var resizer = document.createElement('div');
+        resizer.className = 'draghandle';
+        resizer.style.width = '6px';
+        resizer.style.height = '100vh';
+        element.appendChild(resizer);
+        resizer.addEventListener('mousedown', initResize, false);
+    }
+
+    function initResize(e) {
+        window.addEventListener('mousemove', Resize, false);
+        window.addEventListener('mouseup', stopResize, false);
+        $('#mainArea.content, #tabs iframe').addClass('marginLeft');
+    }
+
+    function Resize(e) {
+        element.style.width = (e.clientX - element.offsetLeft) + 'px';
+        $('#mainArea.content').css('margin-left', (e.clientX - element.offsetLeft) + 'px');
+        $('#tabs iframe').css('margin-left', (element.offsetLeft + 40) + 'px');
+    }
+
+    function stopResize(e) {
+        window.removeEventListener('mousemove', Resize, false);
+        window.removeEventListener('mouseup', stopResize, false);
+        $('#tabs iframe').css('margin-left', element.offsetLeft + 'px');
+    }
 
     $('#hiddenUploadField').change(function () {
         var node = $('#appBuckets').jstree(true).get_selected(true)[0];
@@ -180,5 +329,73 @@ function translateObject(node) {
         success: function (res) {
             $("#forgeViewer").html('Translation started! Please try again in a moment.');
         },
+    });
+}
+
+function prepareUserHubsTree() {
+    $('#userHubs').jstree({
+        'core': {
+            'themes': { "icons": true },
+            'multiple': false,
+            'data': {
+                "url": '/api/forge/datamanagement',
+                "dataType": "json",
+                'cache': false,
+                'data': function (node) {
+                    $('#userHubs').jstree(true).toggle_node(node);
+                    return { "id": node.id };
+                }
+            }
+        },
+        'types': {
+            'default': { 'icon': 'glyphicon glyphicon-question-sign' },
+            '#': { 'icon': 'glyphicon glyphicon-user' },
+            'hubs': { 'icon': 'https://github.com/Autodesk-Forge/bim360appstore-data.management-nodejs-transfer.storage/raw/master/www/img/a360hub.png' },
+            'personalHub': { 'icon': 'https://github.com/Autodesk-Forge/bim360appstore-data.management-nodejs-transfer.storage/raw/master/www/img/a360hub.png' },
+            'bim360Hubs': { 'icon': 'https://github.com/Autodesk-Forge/bim360appstore-data.management-nodejs-transfer.storage/raw/master/www/img/bim360hub.png' },
+            'bim360projects': { 'icon': 'https://github.com/Autodesk-Forge/bim360appstore-data.management-nodejs-transfer.storage/raw/master/www/img/bim360project.png' },
+            'a360projects': { 'icon': 'https://github.com/Autodesk-Forge/bim360appstore-data.management-nodejs-transfer.storage/raw/master/www/img/a360project.png' },
+            'folders': { 'icon': 'glyphicon glyphicon-folder-open' },
+            'items': { 'icon': 'glyphicon glyphicon-file' },
+            'bim360documents': { 'icon': 'glyphicon glyphicon-file' },
+            'versions': { 'icon': 'glyphicon glyphicon-time' },
+            'unsupported': { 'icon': 'glyphicon glyphicon-ban-circle' }
+        },
+        "sort": function (a, b) {
+            var a1 = this.get_node(a);
+            var b1 = this.get_node(b);
+            var parent = this.get_node(a1.parent);
+            if (parent.type === 'items') { // sort by version number
+                var id1 = Number.parseInt(a1.text.substring(a1.text.indexOf('v') + 1, a1.text.indexOf(':')))
+                var id2 = Number.parseInt(b1.text.substring(b1.text.indexOf('v') + 1, b1.text.indexOf(':')));
+                return id1 > id2 ? 1 : -1;
+            }
+            else if (a1.type !== b1.type) return a1.icon < b1.icon ? 1 : -1; // types are different inside folder, so sort by icon (files/folders)
+            else return a1.text > b1.text ? 1 : -1; // basic name/text sort
+        },
+        "plugins": ["types", "state", "sort"],
+        "state": { "key": "autodeskHubs" }// key restore tree state
+    }).bind("activate_node.jstree", function (evt, data) {
+        if (data != null && data.node != null && (data.node.type == 'versions' || data.node.type == 'bim360documents')) {
+            // in case the node.id contains a | then split into URN & viewableId
+            if (data.node.id.indexOf('|') > -1) {
+                var urn = data.node.id.split('|')[1];
+                var viewableId = data.node.id.split('|')[2];
+                launchViewer(urn, viewableId);
+            }
+            else {
+                launchViewer(data.node.id);
+            }
+        }
+    });
+}
+
+function showUser() {
+    jQuery.ajax({
+        url: '/api/forge/user/profile',
+        success: function (profile) {
+            var img = '<img src="' + profile.picture + '" height="30px">';
+            $('#userInfo').html(img + profile.name);
+        }
     });
 }
