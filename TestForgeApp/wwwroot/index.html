@@ -37,7 +37,7 @@
     </nav>
     <!-- End of navbar -->
     <div class="container">
-        <aside style="padding-top: 1rem;">
+        <aside style="padding-top: 1rem; width: 15%;">
             <span id="userInfo"></span>
             <span id="refreshBuckets" class="glyphicon glyphicon-refresh" style="cursor: pointer"></span>
             <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
@@ -46,7 +46,7 @@
             </button>
 
             <div id="appBuckets">
-                    tree here
+                tree here
             </div>
             <!--<div id="userHubs">
             <div style="padding-top: 100px; text-align: center;">
@@ -63,11 +63,11 @@
 
         </aside>
         <div class="resize-handle--x" data-target="aside"></div>
-        <main>
+        <div style="position: relative; width: 85%;">
             <div id="forgeViewer"></div>
             <!--<button id="BackgroundBtnLock">Lock it!</button>-->
             <!--<button id="BackgroundBtnUnlock">Unloock it!</button>-->
-        </main>
+        </div>
     </div>
     <form id="uploadFile" method='post' enctype="multipart/form-data">
         <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden" />
@@ -98,5 +98,4 @@
         </div>
     </div>
 </body>
-<iframe id="hiddenFrame" style="visibility: hidden; display: none" />
 </html>
