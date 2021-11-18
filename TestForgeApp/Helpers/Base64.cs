@@ -12,5 +12,10 @@ namespace TestForgeApp.Helpers
             var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
             return System.Convert.ToBase64String(plainTextBytes);
         }
+
+        public static string Base64Decode(string encodedText)
+        {
+            return System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(encodedText));
+        }
     }
 }

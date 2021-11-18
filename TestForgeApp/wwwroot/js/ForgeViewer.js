@@ -8,7 +8,13 @@ function launchViewer(urn) {
     };
 
     Autodesk.Viewing.Initializer(options, () => {
-        viewer = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer'), { extensions: ['Autodesk.DocumentBrowser, BackgroundBtn'] });
+        var config3d = {
+            loaderExtensions: { svf: "Autodesk.MemoryLimited" },
+            extensions: ['Autodesk.DocumentBrowser BackgroundBtn'],
+        };
+
+        var htmlDiv = document.getElementById('forgeViewer');
+        viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
         var startedCode = viewer.start();
 
         if (startedCode > 0) {

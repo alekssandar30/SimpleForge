@@ -1,10 +1,12 @@
 ﻿using Autodesk.Forge;
+using Autodesk.Forge.Client;
 using Autodesk.Forge.Model;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using TestForgeApp.Helpers;
 using TestForgeApp.Models;
@@ -20,6 +22,10 @@ namespace forgeSample.Controllers
         private IWebHostEnvironment _env;
         public OSSController(IWebHostEnvironment env) { _env = env; }
         public string ClientId { get { return AppSettings.GetAppSetting("FORGE_CLIENT_ID").ToLower(); } }
+        private static Random random = new Random();
+
+        private const int UPLOAD_CHUNK_SIZE = 5; // Mb
+        private static string FILE_PATH = @"D:\Posao\TestForgeApp\TestForgeApp\TestForgeApp\wwwroot\Uploads\TUK_00-ZZ-M3D-ZZ-0001 20211108_Sets.nwd";
 
         /// <summary>
         /// Return list of buckets (id=#) or list of objects (id=bucketKey)
@@ -78,32 +84,82 @@ namespace forgeSample.Controllers
         /// Receive a file from the client and upload to the bucket
         /// </summary>
         /// <returns></returns>
-        [HttpPost]
-        [Route("api/forge/oss/objects")]
-        public async Task<dynamic> UploadObject([FromForm] UploadFile input)
+        [HttpPut]
+        [Route("api/forge/oss/v2/buckets/{bucketKey}/objects/{objectName}/resumable")]
+        //[HttpPost]
+        //[Route("api/forge/oss/objects")]
+        public async Task<dynamic> UploadObject(string bucketKey, string objectName)
         {
-            // save the file on the server
-            var fileSavePath = Path.Combine(_env.WebRootPath, Path.GetFileName(input.fileToUpload.FileName));
-            using (var stream = new FileStream(fileSavePath, FileMode.Create))
-                await input.fileToUpload.CopyToAsync(stream);
+            // kreirati folder Uploads i onda nekako doci do fajla preko objectName-a i smestiti taj fajl
+            // unutar foldera Uploads i onda ce raditi ovaj kod...
 
+            string path = FILE_PATH;
 
+            if (!System.IO.File.Exists(path))
+                path = @"..\..\..\" + FILE_PATH;
+
+            // var fileSavePath = Path.Combine(_env.WebRootPath, Path.GetFileName(objectName));
+
+            //using (var stream = new FileStream(fileSavePath, FileMode.Create))
+            //await input.fileToUpload.CopyToAsync(stream);
+
+            long fileSize = (new FileInfo(path)).Length;
+         
             // get the bucket...
             dynamic oauth = await OAuthController.GetInternalAsync();
-            ObjectsApi objects = new ObjectsApi();
-            objects.Configuration.AccessToken = oauth.access_token;
+            ObjectsApi objectsAPI = new ObjectsApi();
 
-            // upload the file/object, which will create a new object
-            dynamic uploadedObj;
-            using (StreamReader streamReader = new StreamReader(fileSavePath))
+            objectsAPI.Configuration.AccessToken = oauth.access_token;
+            dynamic uploadedObj = null;
+
+            // decide if upload direct or resumable (by chunks)
+            if (fileSize > UPLOAD_CHUNK_SIZE * 1024 * 1024)
             {
-                uploadedObj = await objects.UploadObjectAsync(input.bucketKey,
-                       Path.GetFileName(input.fileToUpload.FileName), (int)streamReader.BaseStream.Length, streamReader.BaseStream,
-                       "application/octet-stream");
+                long chunkSize = 2 * 1024 * 1024;
+                long numberOfChunks = (long)Math.Round((double)(fileSize / chunkSize)) + 1;
+
+                long start = 0;
+                chunkSize = (numberOfChunks > 1 ? chunkSize : fileSize);
+                long end = chunkSize;
+                string sessionId = Guid.NewGuid().ToString();
+
+
+                // upload one chunk at a time
+                using (BinaryReader reader = new BinaryReader(new FileStream(path, FileMode.Open)))
+                {
+                    for (int chunkIndex = 0; chunkIndex < numberOfChunks; chunkIndex++)
+                    {
+                        string range = string.Format("bytes {0}-{1}/{2}", start, end, fileSize);
+
+                        long numberOfBytes = chunkSize + 1;
+                        byte[] fileBytes = new byte[numberOfBytes];
+                        MemoryStream memoryStream = new MemoryStream(fileBytes);
+                        reader.BaseStream.Seek((int)start, SeekOrigin.Begin);
+                        int count = reader.Read(fileBytes, 0, (int)numberOfBytes);
+                        memoryStream.Write(fileBytes, 0, (int)numberOfBytes);
+                        memoryStream.Position = 0;
+
+                        uploadedObj = await objectsAPI.UploadChunkAsync(bucketKey, Path.GetFileName(objectName),
+                            (int)numberOfBytes, range, sessionId, memoryStream);
+
+                        start = end + 1;
+                        chunkSize = ((start + chunkSize > fileSize) ? fileSize - start - 1 : chunkSize);
+                        end = start + chunkSize;
+                    }
+                }
+
+            }
+            else  // upload in a single call
+            {
+                using (StreamReader streamReader = new StreamReader(path))
+                {
+                    uploadedObj = await objectsAPI.UploadObjectAsync(bucketKey, Path.GetFileName(objectName),
+                        (int)streamReader.BaseStream.Length, streamReader.BaseStream, "application/octet-stream");
+                }
             }
 
-           
-            System.IO.File.Delete(fileSavePath);
+            // cleanup
+            System.IO.File.Delete(path);
 
             return uploadedObj;
         }
@@ -111,11 +167,36 @@ namespace forgeSample.Controllers
         /// <summary>
         /// Delete a bucket by id
         /// </summary>
-        /*[HttpDelete]
-        [Route("api/forge/oss/buckets/{bucketKey:string}")]
-        public async Task DeleteBucketById(string bucketKey)
+        [HttpDelete]
+        [Route("api/forge/oss/buckets")]
+        public async Task<IActionResult> DeleteBucketAsync([FromBody] BucketModel bucket)
         {
+            BucketsApi buckets = new BucketsApi();
+            dynamic token = await OAuthController.GetInternalAsync();
+            buckets.Configuration.AccessToken = token.access_token;
+            await buckets.DeleteBucketAsync(bucket.bucketKey);
+            return Ok();
+        }
 
-        }*/
+        // delete object from bucket
+        [HttpDelete]
+        [Route("api/forge/oss/objects")]
+        public async Task<IActionResult> DeleteObjectAsync([FromBody] ObjectModel objectModel)
+        {
+            ObjectsApi objects = new ObjectsApi();
+            dynamic token = await OAuthController.GetInternalAsync();
+            objects.Configuration.AccessToken = token.access_token;
+            string objectName = Base64.Base64Decode(objectModel.objectName).Split("/")[1];
+            await objects.DeleteObjectAsync(objectModel.bucketKey, System.Web.HttpUtility.UrlDecode(objectName));
+            return Ok();
+        }
+
+
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }

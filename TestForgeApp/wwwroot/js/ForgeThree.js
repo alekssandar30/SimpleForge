@@ -191,11 +191,12 @@
                 formData.append('bucketKey', node.id);
 
                 $.ajax({
-                    url: '/api/forge/oss/objects',
-                    data: formData,
+                    url: `/api/forge/oss/v2/buckets/${node.id}/objects/${file.name}/resumable`,
+                    // url: 'api/forge/oss/objects',
+                    //data: formData,
                     processData: false,
                     contentType: false,
-                    type: 'POST',
+                    type: 'PUT',
                     success: function (data) {
                         $('#appBuckets').jstree(true).refresh_node(node);
                         _this.value = '';
@@ -328,6 +329,55 @@ function translateObject(node) {
         data: JSON.stringify({ 'bucketKey': bucketKey, 'objectName': objectKey }),
         success: function (res) {
             $("#forgeViewer").html('Translation started! Please try again in a moment.');
+        },
+    });
+}
+
+
+// delete bucket
+function deleteBucket() {
+    var node = $('#appBuckets').jstree(true).get_selected(true)[0];
+    if (node == undefined) return;
+    if (node.type != 'bucket') return;
+    jQuery.ajax({
+        url: '/api/forge/oss/buckets',
+        type: 'DELETE',
+        contentType: 'application/json',
+        data: JSON.stringify({ 'bucketKey': node.id }),
+        success: function (res) {
+            $('#appBuckets').jstree(true).refresh();
+        },
+    });
+}
+
+function deleteManifest() {
+    var node = $('#appBuckets').jstree(true).get_selected(true)[0];
+    if (node == undefined) return;
+    if (node.type != 'object') return;
+    jQuery.ajax({
+        url: '/api/forge/modelderivative/manifest',
+        type: 'DELETE',
+        contentType: 'application/json',
+        data: JSON.stringify({ 'objectName': node.id }),
+        success: function (res) {
+        },
+    });
+}
+
+// delete object
+function deleteObject() {
+    var node = $('#appBuckets').jstree(true).get_selected(true)[0];
+    if (node == undefined) return;
+    if (node.type != 'object') return;
+    var bucketKey = node.parents[0];
+    var objectKey = node.id;
+    jQuery.ajax({
+        url: '/api/forge/oss/objects',
+        type: 'DELETE',
+        contentType: 'application/json',
+        data: JSON.stringify({ 'bucketKey': bucketKey, 'objectName': objectKey }),
+        success: function (res) {
+            $('#appBuckets').jstree(true).refresh_node(node.parent);
         },
     });
 }
