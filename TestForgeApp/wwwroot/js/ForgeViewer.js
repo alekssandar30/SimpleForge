@@ -4,7 +4,10 @@ function launchViewer(urn) {
     var options = {
         env: 'AutodeskProduction',
         getAccessToken: getForgeToken,
-        api: 'derivativeV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : '')
+        api: 'derivativeV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : ''),
+        memory: {
+            limit: 1024 // in MB
+        }
     };
 
     Autodesk.Viewing.Initializer(options, () => {
@@ -25,6 +28,8 @@ function launchViewer(urn) {
         console.log('Initialization complete, loading a model next...');
         var documentId = 'urn:' + urn;
         Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
+
+       
     });
 }
 
