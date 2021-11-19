@@ -5,9 +5,9 @@ function launchViewer(urn) {
         env: 'AutodeskProduction',
         getAccessToken: getForgeToken,
         api: 'derivativeV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : ''),
-        memory: {
+        /*memory: {
             limit: 1024 // in MB
-        }
+        }*/
     };
 
     Autodesk.Viewing.Initializer(options, () => {
