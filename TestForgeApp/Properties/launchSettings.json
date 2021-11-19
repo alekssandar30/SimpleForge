@@ -17,7 +17,8 @@
         "ASPNETCORE_URLS": "http://localhost:3000",
         "FORGE_CLIENT_ID": "07ACAogp4iXV3heiOT0OkjuqvXJ6vpT2",
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "jsWebView2Debugging": true
     },
     "TestForgeApp": {
       "commandName": "Project",

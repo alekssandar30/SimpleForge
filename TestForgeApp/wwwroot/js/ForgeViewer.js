@@ -5,13 +5,19 @@ function launchViewer(urn) {
         env: 'AutodeskProduction',
         getAccessToken: getForgeToken,
         api: 'derivativeV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : ''),
-        memory: {
+        /*memory: {
             limit: 1024 // in MB
-        }
+        }*/
     };
 
     Autodesk.Viewing.Initializer(options, () => {
-        viewer = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer'), { extensions: ['Autodesk.DocumentBrowser, BackgroundBtn'] });
+        var config3d = {
+            loaderExtensions: { svf: "Autodesk.MemoryLimited" },
+            extensions: ['Autodesk.DocumentBrowser BackgroundBtn'],
+        };
+
+        var htmlDiv = document.getElementById('forgeViewer');
+        viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
         var startedCode = viewer.start();
 
         if (startedCode > 0) {
