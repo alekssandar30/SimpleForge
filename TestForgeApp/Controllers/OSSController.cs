@@ -25,7 +25,6 @@ namespace forgeSample.Controllers
         private static Random random = new Random();
 
         private const int UPLOAD_CHUNK_SIZE = 5; // Mb
-        private static string FILE_PATH = @"D:\Posao\TestForgeApp\TestForgeApp\TestForgeApp\wwwroot\Uploads\TUK_00-ZZ-M3D-ZZ-0001 20211108_Sets.nwd";
 
         /// <summary>
         /// Return list of buckets (id=#) or list of objects (id=bucketKey)
@@ -84,26 +83,21 @@ namespace forgeSample.Controllers
         /// Receive a file from the client and upload to the bucket
         /// </summary>
         /// <returns></returns>
-        [HttpPut]
-        [Route("api/forge/oss/v2/buckets/{bucketKey}/objects/{objectName}/resumable")]
         //[HttpPost]
         //[Route("api/forge/oss/objects")]
-        public async Task<dynamic> UploadObject(string bucketKey, string objectName)
+
+        [HttpPost]
+        [Route("api/uploadModel")]
+        public async Task<dynamic> UploadObject([FromForm] UploadFile input)
         {
-            // kreirati folder Uploads i onda nekako doci do fajla preko objectName-a i smestiti taj fajl
-            // unutar foldera Uploads i onda ce raditi ovaj kod...
+            // save file on the server first
+            
+            var fileSavePath = Path.Combine(_env.WebRootPath, Path.GetFileName(input.fileToUpload.FileName));
 
-            string path = FILE_PATH;
+            using (var stream = new FileStream(fileSavePath, FileMode.Create))
+                await input.fileToUpload.CopyToAsync(stream);
 
-            if (!System.IO.File.Exists(path))
-                path = @"..\..\..\" + FILE_PATH;
-
-            // var fileSavePath = Path.Combine(_env.WebRootPath, Path.GetFileName(objectName));
-
-            //using (var stream = new FileStream(fileSavePath, FileMode.Create))
-            //await input.fileToUpload.CopyToAsync(stream);
-
-            long fileSize = (new FileInfo(path)).Length;
+            long fileSize = (new FileInfo(fileSavePath)).Length;
          
             // get the bucket...
             dynamic oauth = await OAuthController.GetInternalAsync();
@@ -125,7 +119,7 @@ namespace forgeSample.Controllers
 
 
                 // upload one chunk at a time
-                using (BinaryReader reader = new BinaryReader(new FileStream(path, FileMode.Open)))
+                using (BinaryReader reader = new BinaryReader(new FileStream(fileSavePath, FileMode.Open)))
                 {
                     for (int chunkIndex = 0; chunkIndex < numberOfChunks; chunkIndex++)
                     {
@@ -139,7 +133,7 @@ namespace forgeSample.Controllers
                         memoryStream.Write(fileBytes, 0, (int)numberOfBytes);
                         memoryStream.Position = 0;
 
-                        uploadedObj = await objectsAPI.UploadChunkAsync(bucketKey, Path.GetFileName(objectName),
+                        uploadedObj = await objectsAPI.UploadChunkAsync(input.bucketKey, Path.GetFileName(input.fileToUpload.FileName),
                             (int)numberOfBytes, range, sessionId, memoryStream);
 
                         start = end + 1;
@@ -151,15 +145,15 @@ namespace forgeSample.Controllers
             }
             else  // upload in a single call
             {
-                using (StreamReader streamReader = new StreamReader(path))
+                using (StreamReader streamReader = new StreamReader(fileSavePath))
                 {
-                    uploadedObj = await objectsAPI.UploadObjectAsync(bucketKey, Path.GetFileName(objectName),
+                    uploadedObj = await objectsAPI.UploadObjectAsync(input.bucketKey, Path.GetFileName(input.fileToUpload.FileName),
                         (int)streamReader.BaseStream.Length, streamReader.BaseStream, "application/octet-stream");
                 }
             }
 
             // cleanup
-            System.IO.File.Delete(path);
+            System.IO.File.Delete(fileSavePath);
 
             return uploadedObj;
         }

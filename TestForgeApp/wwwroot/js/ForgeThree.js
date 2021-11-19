@@ -180,23 +180,46 @@
     }
 
     $('#hiddenUploadField').change(function () {
+
         var node = $('#appBuckets').jstree(true).get_selected(true)[0];
         var _this = this;
         if (_this.files.length == 0) return;
         var file = _this.files[0];
+
+        //max file chunk size set to 100 KB change as per requirement.
+        var maxFileSizeKB = 100;
+
+        var fileChunks = [];
+        var bufferChunkSizeInBytes = maxFileSizeKB * (1024);
+
+        var currentStreamPosition = 0;
+        var endPosition = bufferChunkSizeInBytes;
+        var size = file.size;
+
+        while (currentStreamPosition < size) {
+            fileChunks.push(file.slice(currentStreamPosition, endPosition));
+            currentStreamPosition = endPosition;
+            endPosition = currentStreamPosition + bufferChunkSizeInBytes;
+        }
+
+        //Append random number to file name to make it unique
+        var fileName = Math.random() + "_" + file.name;
+        uploadFileChunk(fileChunks, fileName, 1, fileChunks.length);
+
         switch (node.type) {
             case 'bucket':
                 var formData = new FormData();
                 formData.append('fileToUpload', file);
                 formData.append('bucketKey', node.id);
 
+
                 $.ajax({
-                    url: `/api/forge/oss/v2/buckets/${node.id}/objects/${file.name}/resumable`,
+                    url: `/api/uploadModel`,
                     // url: 'api/forge/oss/objects',
-                    //data: formData,
+                    data: formData,
                     processData: false,
                     contentType: false,
-                    type: 'PUT',
+                    type: 'POST',
                     success: function (data) {
                         $('#appBuckets').jstree(true).refresh_node(node);
                         _this.value = '';
@@ -204,6 +227,7 @@
                 });
                 break;
         }
+
     });
 });
 
@@ -294,6 +318,14 @@ function autodeskCustomMenu(autodeskNode) {
                         uploadFile();
                     },
                     icon: 'glyphicon glyphicon-cloud-upload'
+                },
+                deleteBucket: {
+                    label: "Delete bucket",
+                    action: function () {
+                        var treeNode = $('#appBuckets').jstree(true).get_selected(true)[0];
+                        deleteBucket(node);
+                    },
+                    icon: 'glyphicon glyphicon-trash'
                 }
             };
             break;
@@ -306,6 +338,14 @@ function autodeskCustomMenu(autodeskNode) {
                         translateObject(treeNode);
                     },
                     icon: 'glyphicon glyphicon-eye-open'
+                },
+                deleteFile: {
+                    label: "Delete",
+                    action: function () {
+                        var treeNode = $('#appBuckets').jstree(true).get_selected(true)[0];
+                        deleteObject(treeNode);
+                    },
+                    icon: 'glyphicon glyphicon-trash'
                 }
             };
             break;
@@ -317,6 +357,43 @@ function autodeskCustomMenu(autodeskNode) {
 function uploadFile() {
     $('#hiddenUploadField').click();
 }
+
+function uploadFileChunk(fileChunks, fileName, currentPart, totalPart) {
+    var formData = new FormData();
+    formData.append('file', fileChunks[currentPart - 1], fileName);
+
+    $.ajax({
+        type: "POST",
+        url: '/api/uploadModel',
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function (data)
+        {
+            if (totalPart > currentPart) {
+                console.log("uploading file part no: " + currentPart, " out of " + totalPart);
+                if (data.status == true) {
+                    if (totalPart == currentPart) {
+                        //Whole file uploaded
+                        console.log("whole file uploaded successfully");
+                    } else {
+                        //Show uploading progress
+                        uploadFileChunk(fileChunks, fileName, currentPart + 1, totalPart);
+                    }
+                } else {
+                    //retry message to upload rest of the file
+                    console.log("failed to upload file part no: " + currentPart);
+                }
+            }
+        },
+        error: function (err) {
+            //retry message to upload rest of the file
+            console("error to upload file part no: " + currentPart);
+        }
+    });
+
+}
+
 
 function translateObject(node) {
     $("#forgeViewer").empty();
@@ -335,8 +412,7 @@ function translateObject(node) {
 
 
 // delete bucket
-function deleteBucket() {
-    var node = $('#appBuckets').jstree(true).get_selected(true)[0];
+function deleteBucket(node) {
     if (node == undefined) return;
     if (node.type != 'bucket') return;
     jQuery.ajax({
@@ -365,8 +441,8 @@ function deleteManifest() {
 }
 
 // delete object
-function deleteObject() {
-    var node = $('#appBuckets').jstree(true).get_selected(true)[0];
+
+function deleteObject(node) {
     if (node == undefined) return;
     if (node.type != 'object') return;
     var bucketKey = node.parents[0];
@@ -381,6 +457,7 @@ function deleteObject() {
         },
     });
 }
+
 
 function prepareUserHubsTree() {
     $('#userHubs').jstree({
