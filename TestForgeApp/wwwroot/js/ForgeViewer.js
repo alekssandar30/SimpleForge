@@ -14,7 +14,8 @@ function launchViewer(urn) {
         // var randomId = makeid(36);
         var config3d = {
             loaderExtensions: { svf: "Autodesk.MemoryLimited" },
-            extensions: ['Autodesk.DocumentBrowser'],
+            extensions: ['Autodesk.DocumentBrowser', 'Autodesk.Viewing.MarkupsCore', 'Autodesk.Viewing.MarkupsGui'],
+            // extensions: ['Autodesk.DocumentBrowser'],
         };
 
         var htmlDiv = document.getElementById('forgeViewer');
@@ -30,16 +31,17 @@ function launchViewer(urn) {
         var documentId = 'urn:' + urn;
         Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
 
-       
     });
 }
+
 
 function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     var viewables = doc.getRoot().getDefaultGeometry();
     viewer.loadDocumentNode(doc, viewables).then(i => {
         // documented loaded, any action
-        
+        console.log('************ VIEWABLES *****************')
+        console.log(viewables);
     });
 }
 

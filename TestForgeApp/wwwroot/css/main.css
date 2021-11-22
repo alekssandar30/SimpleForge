@@ -130,3 +130,18 @@ body {
     cursor: col-resize;
     margin: 0 0 0 auto;
 }
+
+
+.show-env-bg-button {
+    background: red;
+}
+
+.hide-env-bg-button {
+    background: blue;
+}
+
+.boundingBoxButton {
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

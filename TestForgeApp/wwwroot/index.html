@@ -15,15 +15,13 @@
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
 
     <script src="lib/lodash.js/lodash.js"></script>
-    
+
     <!-- this project files -->
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/ForgeThree.js"></script>
     <script src="js/ForgeViewer.js"></script>
 
-    <!--Extensions-->
     
-
 </head>
 
 <body>
@@ -69,8 +67,8 @@
         <div class="resize-handle--x" data-target="aside"></div>
         <div style="position: relative; width: 85%;">
             <div id="forgeViewer"></div>
-            <!--<button id="BackgroundBtnLock">Lock it!</button>-->
-            <!--<button id="BackgroundBtnUnlock">Unloock it!</button>-->
+            <!--<button id="BackgroundBtnLock">Lock it!</button>
+            <button id="BackgroundBtnUnlock">Unloock it!</button>-->
         </div>
     </div>
     <form id="uploadFile" enctype="multipart/form-data">
@@ -103,6 +101,11 @@
     </div>
 
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+    
+    <!--Extensions-->
+    <script src="js/extensions/backgoundBtn.js"></script>
+    <script src="./js/extensions/ToolbarExtension.js"></script>
+    <script src="./js/extensions/BoundBox.js"></script>
 
 </body>
 </html>
