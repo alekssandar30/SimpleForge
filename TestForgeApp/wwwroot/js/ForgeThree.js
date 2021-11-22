@@ -158,7 +158,7 @@
         var file = _this.files[0];
 
         //max file chunk size set to 100 KB change as per requirement.
-        var maxFileSizeKB = 100;
+        /*var maxFileSizeKB = 100;
 
         var fileChunks = [];
         var bufferChunkSizeInBytes = maxFileSizeKB * (1024);
@@ -171,11 +171,11 @@
             fileChunks.push(file.slice(currentStreamPosition, endPosition));
             currentStreamPosition = endPosition;
             endPosition = currentStreamPosition + bufferChunkSizeInBytes;
-        }
+        }*/
 
         //Append random number to file name to make it unique
-        var fileName = Math.random() + "_" + file.name;
-        uploadFileChunk(fileChunks, fileName, 1, fileChunks.length);
+        // var fileName = Math.random() + "_" + file.name;
+        // uploadFileChunk(fileChunks, fileName, 1, fileChunks.length, node.id);
 
         switch (node.type) {
             case 'bucket':
@@ -257,7 +257,9 @@ function prepareAppBucketTree() {
         if (data != null && data.node != null && data.node.type == 'object') {
             $("#forgeViewer").empty();
             var urn = data.node.id;
+            // console.log('urn: ' + urn);
             getForgeToken(function (access_token) {
+                // console.log('access_token: ' + access_token);
                 jQuery.ajax({
                     url: 'https://developer.api.autodesk.com/modelderivative/v2/designdata/' + urn + '/manifest',
                     headers: { 'Authorization': 'Bearer ' + access_token },
@@ -294,7 +296,7 @@ function autodeskCustomMenu(autodeskNode) {
                     label: "Delete bucket",
                     action: function () {
                         var treeNode = $('#appBuckets').jstree(true).get_selected(true)[0];
-                        deleteBucket(node);
+                        deleteBucket(treeNode);
                     },
                     icon: 'glyphicon glyphicon-trash'
                 }
@@ -329,9 +331,10 @@ function uploadFile() {
     $('#hiddenUploadField').click();
 }
 
-function uploadFileChunk(fileChunks, fileName, currentPart, totalPart) {
+function uploadFileChunk(fileChunks, fileName, currentPart, totalPart, bucketKey) {
     var formData = new FormData();
-    formData.append('file', fileChunks[currentPart - 1], fileName);
+    formData.append('fileToUpload', fileChunks[currentPart - 1], fileName);
+    formData.append('bucketKey', bucketKey);
 
     $.ajax({
         type: "POST",
@@ -339,6 +342,7 @@ function uploadFileChunk(fileChunks, fileName, currentPart, totalPart) {
         contentType: false,
         processData: false,
         data: formData,
+        enctype: 'multipart/form-data',
         success: function (data)
         {
             if (totalPart > currentPart) {
@@ -359,7 +363,7 @@ function uploadFileChunk(fileChunks, fileName, currentPart, totalPart) {
         },
         error: function (err) {
             //retry message to upload rest of the file
-            console("error to upload file part no: " + currentPart);
+            console.log("error to upload file part no: " + currentPart);
         }
     });
 
