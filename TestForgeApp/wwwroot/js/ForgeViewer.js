@@ -14,7 +14,7 @@ function launchViewer(urn) {
         // var randomId = makeid(36);
         var config3d = {
             loaderExtensions: { svf: "Autodesk.MemoryLimited" },
-            extensions: ['Autodesk.DocumentBrowser', 'Autodesk.Viewing.MarkupsCore', 'Autodesk.Viewing.MarkupsGui'],
+            extensions: ['Autodesk.DocumentBrowser', 'Autodesk.Viewing.MarkupsCore', 'Autodesk.Viewing.MarkupsGui', 'ToolbarExtension'],
             // extensions: ['Autodesk.DocumentBrowser'],
         };
 
