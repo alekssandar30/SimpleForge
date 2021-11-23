@@ -1,4 +1,5 @@
 ﻿var viewer;
+var viewerApp;
 
 function launchViewer(urn) {
     var options = {
@@ -10,13 +11,28 @@ function launchViewer(urn) {
         }*/
     };
 
-    Autodesk.Viewing.Initializer(options, () => {
+    Autodesk.Viewing.Initializer(options, function onInitialized() {
         // var randomId = makeid(36);
+        var documentId = 'urn:' + urn;
+
+        console.log(documentId);
         var config3d = {
             loaderExtensions: { svf: "Autodesk.MemoryLimited" },
-            extensions: ['Autodesk.DocumentBrowser', 'Autodesk.Viewing.MarkupsCore', 'Autodesk.Viewing.MarkupsGui', 'ToolbarExtension'],
-            // extensions: ['Autodesk.DocumentBrowser'],
+            extensions: [
+                'Autodesk.DocumentBrowser',
+                'Autodesk.Viewing.MarkupsCore',
+                'Autodesk.Viewing.MarkupsGui',
+                'Autodesk.VisualClusters',
+                'Autodesk.WebXR.VR',
+                'ToolbarExtension',
+                'BoundingBoxExtension',
+            ],
+            
         };
+
+        //viewerApp = new Autodesk.Viewing.ViewingApplication('forgeViewer');
+        //viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D, config3d);
+        //viewerApp.loadDocument(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
 
         var htmlDiv = document.getElementById('forgeViewer');
         viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
@@ -38,6 +54,8 @@ function launchViewer(urn) {
 function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     var viewables = doc.getRoot().getDefaultGeometry();
+    //var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
+
     viewer.loadDocumentNode(doc, viewables).then(i => {
         // documented loaded, any action
         console.log('************ VIEWABLES *****************')
@@ -45,8 +63,8 @@ function onDocumentLoadSuccess(doc) {
     });
 }
 
-function onDocumentLoadFailure(viewerErrorCode, viewerErrorMsg) {
-    console.error('onDocumentLoadFailure() - errorCode:' + viewerErrorCode + '\n- errorMessage:' + viewerErrorMsg);
+function onDocumentLoadFailure(viewerErrorCode) {
+    console.error('onDocumentLoadFailure() - errorCode:' + viewerErrorCode);
 }
 
 function getForgeToken(callback) {

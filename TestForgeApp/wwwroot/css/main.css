@@ -141,6 +141,7 @@ body {
 }
 
 .boundingBoxButton {
+    color: white;
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: center;

@@ -257,7 +257,6 @@ function prepareAppBucketTree() {
         if (data != null && data.node != null && data.node.type == 'object') {
             $("#forgeViewer").empty();
             var urn = data.node.id;
-            console.log('urn: ' + urn);
             getForgeToken(function (access_token) {
                 console.log('access_token: ' + access_token);
                 jQuery.ajax({

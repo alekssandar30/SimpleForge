@@ -25,6 +25,8 @@
         let toolbar = this.viewer.toolbar;
 
         this.boundBoxButton = new Autodesk.Viewing.UI.Button('boundBoxButton');
+        this.boundBoxButton.setDisplay('Box');
+
         this.boundBoxButton.addClass('boundingBoxButton');
         this.boundBoxButton.setToolTip('Show measures');
 
@@ -173,3 +175,5 @@ class BoundBox {
 
     }
 }
+
+Autodesk.Viewing.theExtensionManager.registerExtension('BoundingBoxExtension', BoundingBoxExtension);

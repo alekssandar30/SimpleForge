@@ -25,7 +25,6 @@ ToolbarExtension.prototype.unload = function () {
 };
 
 ToolbarExtension.prototype.onToolbarCreated = function (toolbar) {
-    // alert('TODO: customize Viewer toolbar');
 
     var viewer = this.viewer;
 
