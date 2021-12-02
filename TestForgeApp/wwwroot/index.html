@@ -35,6 +35,15 @@
                     <h3>ZG Management</h3>
                 </li>
             </ul>
+            <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 5px;">
+                <input id="ButtonProperty" type="button" class="btn" value="Get Properties" />&nbsp;
+                <div class="form-outline">
+                    <input type="search" id="searchInput" placeholder="Search properties" class="form-control" />
+                </div>
+                <button type="button" id="searchProperties" class="btn btn-primary">
+                    Search
+                </button>
+            </div>
         </div>
     </nav>
     <!-- End of navbar -->
@@ -67,8 +76,13 @@
         <div class="resize-handle--x" data-target="aside"></div>
         <div style="position: relative; width: 85%;">
             <div id="forgeViewer"></div>
-            
+
         </div>
+        <div class="resize-handle--x" data-target="aside"></div>
+        <div style="padding-top: 1rem; width: 10%">
+            <textarea style="font-size: 14px" id="TextAreaResult"> </textarea>
+        </div>
+
     </div>
     <form id="uploadFile" enctype="multipart/form-data">
         <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden" />
@@ -102,9 +116,16 @@
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/three.min.js"></script>
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
 
+    <!--<script src="https://petrbroz.github.io/forge-viewer-utils/master/Utilities.js"></script>-->
+    <script src="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/CustomPropertiesExtension/contents/main.js"></script>
+
+
     <!--Extensions-->
     <script src="js/extensions/ToolbarExtension.js"></script>
     <script src="js/extensions/BoundBox.js"></script>
+    <script src="js/extensions/heatmap.js"></script>
+    <script src="js/extensions/viewerPropertiesSearch.js"></script>
+    <script src="js/extensions/CustomPropertiesExtension.js"></script>
 
 </body>
 </html>

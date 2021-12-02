@@ -22,6 +22,7 @@
 
 
     onToolbarCreated() {
+        var clicked = false;
         let toolbar = this.viewer.toolbar;
 
         this.boundBoxButton = new Autodesk.Viewing.UI.Button('boundBoxButton');
@@ -31,6 +32,7 @@
         this.boundBoxButton.setToolTip('Show measures');
 
         this.boundBoxButton.onClick = (e) => {
+            clicked = !clicked;
             var idArr = viewer.getSelection();
 
             var box = new BoundBox(idArr);
@@ -42,9 +44,11 @@
 
                     var bBox = box.getModifiedWorldBoundingBox(this.viewer.model, idArr[i]);
 
-                    box.drawBox(bBox.min, bBox.max, this.viewer);
+                    box.drawBox(bBox.min, bBox.max, this.viewer, clicked);
                 }
             }
+
+          
 
         };
 
@@ -54,6 +58,7 @@
             measureTools = new Autodesk.Viewing.UI.ControlGroup('measureTools');
             toolbar.addControl(measureTools);
         }
+
         measureTools.addControl(this.boundBoxButton);
     }
 
@@ -121,7 +126,7 @@ class BoundBox {
         return new THREE.Mesh(geometry, material);
 
     }
-    drawBox(min, max, viewer) {
+    drawBox(min, max, viewer, clicked) {
 
         const vertices = [
 
@@ -171,6 +176,16 @@ class BoundBox {
 
             let mesh = this.getMesh(new Float32Array(vertices[i]));
             viewer.overlays.addMesh(mesh, 'custom-scene');
+        }
+
+        if (!clicked) {
+            for (var i = 0; i < vertices.length; i++) {
+
+                let mesh = this.getMesh(new Float32Array(vertices[i]));
+                viewer.overlays.removeMesh(mesh, 'custom-scene');
+            }
+
+            viewer.overlays.removeScene('custom-scene');
         }
 
     }

@@ -6,15 +6,13 @@ function launchViewer(urn) {
         env: 'AutodeskProduction',
         getAccessToken: getForgeToken,
         api: 'derivativeV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : ''),
-        /*memory: {
-            limit: 1024 // in MB
-        }*/
+        //api: 'streamingV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : '')
+        
     };
 
     Autodesk.Viewing.Initializer(options, function onInitialized() {
         // var randomId = makeid(36);
         var documentId = 'urn:' + urn;
-
         console.log(documentId);
         var config3d = {
             loaderExtensions: { svf: "Autodesk.MemoryLimited" },
@@ -22,20 +20,23 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
-                'Autodesk.VisualClusters',
-                'Autodesk.WebXR.VR',
                 'ToolbarExtension',
                 'BoundingBoxExtension',
             ],
             
         };
 
-        //viewerApp = new Autodesk.Viewing.ViewingApplication('forgeViewer');
-        //viewerApp.registerViewer(viewerApp.k3D, Autodesk.Viewing.Private.GuiViewer3D, config3d);
-        //viewerApp.loadDocument(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
-
         var htmlDiv = document.getElementById('forgeViewer');
+
         viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
+        viewer.setQualityLevel(/* ambient shadows */ false, /* antialiasing */ true);
+        viewer.setGroundReflection(false);
+        viewer.setGhosting(true);
+        //const profileSettings = Autodesk.Viewing.ProfileSettings.Navis;
+        //const profile = new Autodesk.Viewing.Profile(profileSettings);
+        //viewer.setProfile(profile);
+        
+
         var startedCode = viewer.start();
 
         if (startedCode > 0) {
@@ -44,7 +45,7 @@ function launchViewer(urn) {
         }
 
         console.log('Initialization complete, loading a model next...');
-        var documentId = 'urn:' + urn;
+
         Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
 
     });
@@ -56,10 +57,21 @@ function onDocumentLoadSuccess(doc) {
     var viewables = doc.getRoot().getDefaultGeometry();
     //var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
 
+    viewer.loadExtension('CustomPropertiesExtension', {
+        "properties": {
+            "1": {
+                "Search properties": {
+                    "search": "search value"
+                }
+            }
+        }
+    });
+
     viewer.loadDocumentNode(doc, viewables).then(i => {
         // documented loaded, any action
         console.log('************ VIEWABLES *****************')
         console.log(viewables);
+
     });
 }
 

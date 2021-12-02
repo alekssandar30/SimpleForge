@@ -51,6 +51,23 @@
         $("#newBucketKey").focus();
     })
 
+    $('#ButtonProperty').click(function () {
+        //var userInput = $('#searchInput').val().toLowerCase();
+        //handleSearch(userInput);
+        var txtArea = document.getElementById("TextAreaResult");
+        viewerGetProperties(viewer, txtArea);
+    });
+
+    $('#searchProperties').click(function () {
+        var txtArea = document.getElementById("TextAreaResult");
+        var searchStr = document.getElementById("searchInput").value;
+        if (searchStr.length == 0) {
+            txtArea.value = "no search string.";
+            return;
+        }
+        viewerSearch(viewer, searchStr, txtArea);
+    });
+
     const resizeData = {
         tracking: false,
         startWidth: null,
@@ -132,23 +149,6 @@
         }
     });
 
-    /*BackgroundBtn.prototype.load = function () {
-        alert('MyAwesomeExtension is loaded!');
-
-        var viewer = this.viewer;
-
-        var lockBtn = document.getElementById('BackgroundBtnLock');
-        lockBtn.addEventListener('click', function () {
-            viewer.setNavigationLock(true);
-        });
-
-        var unlockBtn = document.getElementById('BackgroundBtnUnlock');
-        unlockBtn.addEventListener('click', function () {
-            viewer.setNavigationLock(false);
-        });
-
-        return true;
-    };*/
 
     $('#hiddenUploadField').change(function () {
 
@@ -433,6 +433,26 @@ function deleteObject(node) {
 }
 
 
+// search by properties
+function handleSearch(userInput) {
+    // use viewer.search() method for searching properties?
+    var searchPropList = new Array(userInput);
+    var idArr = viewer.getSelection();
+   
+    viewer.search(userInput, searchCallback, searchErrorCallback, searchPropList);
+}
+
+function searchCallback(ids) {
+    alert(ids);
+    _viewer.isolate(ids);
+    _viewer.fitToView(ids);
+}
+
+function searchErrorCallback(error) {
+    console.log(error);
+}
+
+
 function prepareUserHubsTree() {
     $('#userHubs').jstree({
         'core': {
@@ -500,3 +520,4 @@ function showUser() {
         }
     });
 }
+
