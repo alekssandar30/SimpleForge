@@ -55,13 +55,15 @@ function viewerSearch(viewer, searchStr) {
         console.log("error in search().");
     }
 
-    viewer.model.search(searchStr, dbids => viewer.isolate(dbids), console.error, ["Geometry"], { searchHidden: true })
+    //viewer.model.search(searchStr, dbids => viewer.isolate(dbids), console.error, ["Geometry"], { searchHidden: true })
 
     //---------------------------------------
     // Main - Search 
     //-----------------
 
     viewer.clearSelection();
-    viewer.search(searchStr, searchCallback, searchErrorCallback);
 
+    
+
+    //viewer.search(searchStr, searchCallback, searchErrorCallback);
 }

@@ -65,7 +65,38 @@
         if (searchStr.length == 0) {
             return;
         }
-        viewerSearch(viewer, searchStr);
+
+        //viewerSearch(viewer, searchStr);
+
+        viewer.search(searchStr, (dbIds) => {
+            // success
+            viewer.model.getBulkProperties(dbIds, ['Icon', 'Type', 'Required', 'Material', 'NAME', 'TYPE'], (elements) => {
+                let dbIdsToSelect = [];
+                console.log(elements);
+                //for (var i = 0; i < elements.length; i++) {
+                //    //console.log(elements[i].properties[0].displayValue);
+                //    if (elements[i].properties[i].displayValue === searchStr) {
+                //        dbIdsToSelect.push(elements[i].dbId);
+                //    }
+                //}
+
+                for (var i = 0; i < elements[0].properties.length; i++) {
+                    var currentElement = elements[0].properties[i];
+                    if (currentElement.displayValue === searchStr) {
+                        dbIdsToSelect.push(elements[0].dbId);
+                    }
+                }
+
+                console.log(dbIdsToSelect);
+                //viewer.select(dbIdsToSelect);
+                //viewer.fitToView(dbIdsToSelect);
+                viewer.isolate(dbIdsToSelect);
+            }, (e) => {
+                // error, handle here...
+                console.log(e);
+            }, ['Icon', 'Type', 'Required', 'Material', 'NAME', 'TYPE']);
+        });
+        
     });
 
     const resizeData = {
