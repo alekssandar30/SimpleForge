@@ -59,13 +59,13 @@
     });
 
     $('#searchProperties').click(function () {
-        var txtArea = document.getElementById("TextAreaResult");
+        //var txtArea = document.getElementById("TextAreaResult");
+        //var searchTypeStr = document.getElementById("searchTypeInput").value;
         var searchStr = document.getElementById("searchInput").value;
         if (searchStr.length == 0) {
-            txtArea.value = "no search string.";
             return;
         }
-        viewerSearch(viewer, searchStr, txtArea);
+        viewerSearch(viewer, searchStr);
     });
 
     const resizeData = {

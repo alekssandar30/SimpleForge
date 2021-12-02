@@ -40,25 +40,21 @@
 }
 
 
-function viewerSearch(viewer, searchStr, outputTextArea) {
+function viewerSearch(viewer, searchStr) {
 
-    // Callback for _viewer.search() on success. 
     function searchCallback(ids) {
-        if (ids.length > 0) {
-            viewer.isolate(ids);
-            outputTextArea.value = ids;
-        }
-        else {
-            outputTextArea.value = "nothing found.";
-        }
+        viewer.isolate(ids);
+        //if (ids.length > 0) {
+        //}
+        //else {
+        //    console.log('not found');
+        //}
     }
 
-    // Callback for _viewer.search() on error. 
     function searchErrorCallback() {
-        outputTextArea.value = "error in search().";
+        console.log("error in search().");
     }
 
-    outputTextArea.value = 'wow searchovao si ' + searchStr;
     viewer.model.search(searchStr, dbids => viewer.isolate(dbids), console.error, ["Geometry"], { searchHidden: true })
 
     //---------------------------------------
