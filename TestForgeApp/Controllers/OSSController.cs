@@ -88,8 +88,9 @@ namespace forgeSample.Controllers
 
         [HttpPost]
         [Route("api/uploadModel")]
-        [RequestFormLimits(MultipartBodyLengthLimit = Int32.MaxValue)]
-        [RequestSizeLimit(Int32.MaxValue)]
+        [RequestFormLimits(MultipartBodyLengthLimit = long.MaxValue)]
+        [RequestSizeLimit(long.MaxValue)]
+        [DisableRequestSizeLimit]
         public async Task<dynamic> UploadObject([FromForm] UploadFile input)
         {
             // save file on the server first

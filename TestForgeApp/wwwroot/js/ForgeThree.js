@@ -60,23 +60,29 @@
 
     $('#searchProperties').click(function () {
         //var txtArea = document.getElementById("TextAreaResult");
-        //var searchTypeStr = document.getElementById("searchTypeInput").value;
-        var searchStr = document.getElementById("searchInput").value;
-        if (searchStr.length == 0) {
+        const searchCategoryStr = document.getElementById("searchCategoryInput").value.toUpperCase();
+        const searchStr = document.getElementById("searchInput").value.toLowerCase();
+
+        if (searchStr.length == 0 || searchCategoryStr.length == 0) {
             return;
         }
 
         //viewerSearch(viewer, searchStr);
         
         viewer.search(searchStr, (dbIds) => {
-            // success
-            viewer.model.getBulkProperties(dbIds, ['Icon', 'Type', 'Required', 'Material', 'NAME', 'TYPE'], (elements) => {
+            // const categoryArray = ['Icon', 'Type', 'Required', 'Material', 'NAME', 'TYPE'];
+            const categoryArray = [searchCategoryStr, searchCategoryStr.toLowerCase(), searchCategoryStr.charAt(0).toUpperCase() + searchCategoryStr.toLowerCase().substring(1)];
+            console.log(searchStr);
+            console.log(categoryArray);
+
+            viewer.model.getBulkProperties(dbIds, categoryArray, (elements) => {
                 let dbIdsToSelect = [];
-                console.log(elements);
                 
                 for (var i = 0; i < elements.length; i++) {
                     for (var j = 0; j < elements[i].properties.length; j++) {
-                        if (elements[i].properties[j].displayValue === searchStr) {
+                        const propertyValue = elements[i].properties[j].displayValue.toString().toLowerCase();
+
+                        if (propertyValue.indexOf(searchStr) !== -1) {
                             dbIdsToSelect.push(elements[i].dbId);
                         }
                     }
@@ -88,7 +94,7 @@
             }, (e) => {
                 // error, handle here...
                 console.log(e);
-            }, ['Icon', 'Type', 'Required', 'Material', 'NAME', 'TYPE']);
+            }, categoryArray);
         });
         
     });
@@ -246,6 +252,8 @@ function createNewBucket() {
         }
     });
 }
+
+// ********************************** MENU - tree js ***************************************
 
 function prepareAppBucketTree() {
     $('#appBuckets').jstree({
