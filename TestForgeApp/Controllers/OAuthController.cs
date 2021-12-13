@@ -1,7 +1,10 @@
 ﻿using Autodesk.Forge;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Net;
 using System.Threading.Tasks;
+using TestForgeApp.Helpers;
+using TestForgeApp.Models.dto;
 
 namespace forgeSample.Controllers
 {
@@ -18,6 +21,20 @@ namespace forgeSample.Controllers
         [Route("api/forge/oauth/token")]
         public async Task<dynamic> GetPublicAsync()
         {
+            //Credentials credentials = await Credentials.FromSessionAsync(Request.Cookies, Response.Cookies);
+            
+            //if (credentials == null)
+            //{
+            //    base.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+            //    return new AccessToken();
+            //}
+
+            //return new AccessToken()
+            //{
+            //    access_token = credentials.TokenPublic,
+            //    expires_in = (int)credentials.ExpiresAt.Subtract(DateTime.Now).TotalSeconds
+            //};
+
             if (PublicToken == null || PublicToken.ExpiresAt < DateTime.UtcNow)
             {
                 PublicToken = await Get2LeggedTokenAsync(new Scope[] { Scope.ViewablesRead });
@@ -25,6 +42,55 @@ namespace forgeSample.Controllers
             }
             return PublicToken;
         }
+
+
+        /// <summary>
+        /// Endpoint for logout from bim360
+        /// </summary>
+        [HttpGet]
+        [Route("api/forge/auth/signout")]
+        public IActionResult Signout()
+        {
+            Credentials.Signout(base.Response.Cookies);
+
+            return Redirect("/");
+        }
+
+
+
+        [HttpGet]
+        [Route("api/forge/oauth/url")]
+        public string GetOAuthURL()
+        {
+            // prepare the sign in URL
+            Scope[] scopes = { Scope.DataRead };
+            ThreeLeggedApi _threeLeggedApi = new ThreeLeggedApi();
+            string oauthUrl = _threeLeggedApi.Authorize(
+              AppSettings.GetAppSetting("FORGE_CLIENT_ID"),
+              oAuthConstants.CODE,
+              AppSettings.GetAppSetting("FORGE_CALLBACK_URL"),
+              new Scope[] { Scope.DataRead, Scope.DataCreate, Scope.DataWrite, Scope.ViewablesRead });
+
+            return oauthUrl;
+        }
+
+        [HttpGet]
+        [Route("api/forge/callback/oauth")] // see Web.Config FORGE_CALLBACK_URL variable
+        public async Task<IActionResult> OAuthCallbackAsync(string code)
+        {
+            // create credentials form the oAuth CODE
+            Credentials credentials = await Credentials.CreateFromCodeAsync(code, Response.Cookies);
+
+            return Redirect("/");
+        }
+
+        [HttpGet]
+        [Route("api/forge/clientid")] // see Web.Config FORGE_CALLBACK_URL variable
+        public dynamic GetClientID()
+        {
+            return new { id = AppSettings.GetAppSetting("FORGE_CLIENT_ID") };
+        }
+
 
         /// <summary>
         /// Get access token with internal (write) scope
@@ -48,19 +114,11 @@ namespace forgeSample.Controllers
             TwoLeggedApi oauth = new TwoLeggedApi();
             string grantType = "client_credentials";
             dynamic bearer = await oauth.AuthenticateAsync(
-              GetAppSetting("FORGE_CLIENT_ID"),
-              GetAppSetting("FORGE_CLIENT_SECRET"),
+              AppSettings.GetAppSetting("FORGE_CLIENT_ID"),
+              AppSettings.GetAppSetting("FORGE_CLIENT_SECRET"),
               grantType,
               scopes);
             return bearer;
-        }
-
-        /// <summary>
-        /// Reads appsettings from web.config
-        /// </summary>
-        public static string GetAppSetting(string settingKey)
-        {
-            return Environment.GetEnvironmentVariable(settingKey).Trim();
         }
     }
 }
