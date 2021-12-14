@@ -57,16 +57,7 @@ function onDocumentLoadSuccess(doc) {
     var viewables = doc.getRoot().getDefaultGeometry();
     //var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
 
-    viewer.loadExtension('CustomPropertiesExtension', {
-        "properties": {
-            "1": {
-                "Search properties": {
-                    "search": "search value"
-                }
-            }
-        }
-    });
-
+   
     viewer.loadDocumentNode(doc, viewables).then(i => {
         // documented loaded, any action
         console.log('************ VIEWABLES *****************')

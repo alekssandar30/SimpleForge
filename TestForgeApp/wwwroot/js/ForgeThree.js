@@ -51,135 +51,8 @@
         $("#newBucketKey").focus();
     })
 
-    $('#ButtonProperty').click(function () {
-        //var userInput = $('#searchInput').val().toLowerCase();
-        //handleSearch(userInput);
-        var txtArea = document.getElementById("TextAreaResult");
-        viewerGetProperties(viewer, txtArea);
-    });
 
-    $('#searchProperties').click(function () {
-        //var txtArea = document.getElementById("TextAreaResult");
-        const searchCategoryStr = document.getElementById("searchCategoryInput").value.toUpperCase();
-        const searchStr = document.getElementById("searchInput").value.toLowerCase();
-
-        if (searchStr.length == 0 || searchCategoryStr.length == 0) {
-            return;
-        }
-
-        //viewerSearch(viewer, searchStr);
-        
-        viewer.search(searchStr, (dbIds) => {
-            // const categoryArray = ['Icon', 'Type', 'Required', 'Material', 'NAME', 'TYPE'];
-            const categoryArray = [searchCategoryStr, searchCategoryStr.toLowerCase(), searchCategoryStr.charAt(0).toUpperCase() + searchCategoryStr.toLowerCase().substring(1)];
-            console.log(searchStr);
-            console.log(categoryArray);
-
-            viewer.model.getBulkProperties(dbIds, categoryArray, (elements) => {
-                let dbIdsToSelect = [];
-                
-                for (var i = 0; i < elements.length; i++) {
-                    for (var j = 0; j < elements[i].properties.length; j++) {
-                        const propertyValue = elements[i].properties[j].displayValue.toString().toLowerCase();
-
-                        if (propertyValue.indexOf(searchStr) !== -1) {
-                            dbIdsToSelect.push(elements[i].dbId);
-                        }
-                    }
-                }
-
-                //viewer.select(dbIdsToSelect);
-                //viewer.fitToView(dbIdsToSelect);
-                viewer.isolate(dbIdsToSelect);
-            }, (e) => {
-                // error, handle here...
-                console.log(e);
-            }, categoryArray);
-        });
-        
-    });
-
-    const resizeData = {
-        tracking: false,
-        startWidth: null,
-        startCursorScreenX: null,
-        handleWidth: 10,
-        resizeTarget: null,
-        parentElement: null,
-        maxWidth: null
-    };
-
-    const selectTarget = (fromElement, selector) => {
-        if (!(fromElement instanceof HTMLElement)) {
-            return null;
-        }
-
-        return fromElement.querySelector(selector);
-    };
-
-    $(document.body).on("mousedown", ".resize-handle--x", null, (event) => {
-        if (event.button !== 0) {
-            return;
-        }
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        const handleElement = event.currentTarget;
-
-        if (!handleElement.parentElement) {
-            console.error(new Error("Parent element not found."));
-            return;
-        }
-
-        // Use the target selector on the handle to get the resize target.
-        const targetSelector = handleElement.getAttribute("data-target");
-        const targetElement = selectTarget(
-            handleElement.parentElement,
-            targetSelector
-        );
-
-        if (!targetElement) {
-            console.error(new Error("Resize target element not found."));
-            return;
-        }
-
-        resizeData.startWidth = $(targetElement).outerWidth();
-        resizeData.startCursorScreenX = event.screenX - 20;
-        resizeData.resizeTarget = targetElement;
-        resizeData.parentElement = handleElement.parentElement;
-        resizeData.maxWidth =
-            $(handleElement.parentElement).innerWidth() - resizeData.handleWidth;
-        resizeData.tracking = true;
-
-        console.log("tracking started");
-    });
-
-    $(window).on(
-        "mousemove",
-        null,
-        null,
-        _.debounce((event) => {
-            if (resizeData.tracking) {
-                const cursorScreenXDelta = event.screenX - resizeData.startCursorScreenX;
-                const newWidth = Math.min(
-                    resizeData.startWidth + cursorScreenXDelta,
-                    resizeData.maxWidth
-                );
-
-                $(resizeData.resizeTarget).outerWidth(newWidth);
-            }
-        }, 1)
-    );
-
-    $(window).on("mouseup", null, null, (event) => {
-        if (resizeData.tracking) {
-            resizeData.tracking = false;
-
-            console.log("tracking stopped");
-        }
-    });
-
+    // ***************************************** UPLOAD TO BUCKET **************************************
 
     $('#hiddenUploadField').change(function () {
 
@@ -232,6 +105,8 @@
 
     });
 });
+
+// ******************************** CREATE A BUCKET ****************************************
 
 function createNewBucket() {
     console.log('creating a bucket');
@@ -463,26 +338,6 @@ function deleteObject(node) {
             $('#appBuckets').jstree(true).refresh_node(node.parent);
         },
     });
-}
-
-
-// search by properties
-function handleSearch(userInput) {
-    // use viewer.search() method for searching properties?
-    var searchPropList = new Array(userInput);
-    var idArr = viewer.getSelection();
-   
-    viewer.search(userInput, searchCallback, searchErrorCallback, searchPropList);
-}
-
-function searchCallback(ids) {
-    alert(ids);
-    _viewer.isolate(ids);
-    _viewer.fitToView(ids);
-}
-
-function searchErrorCallback(error) {
-    console.log(error);
 }
 
 
