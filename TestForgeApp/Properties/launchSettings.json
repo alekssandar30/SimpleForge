@@ -13,9 +13,9 @@
       "launchBrowser": true,
       "environmentVariables": {
         "FORGE_CALLBACK_URL": "http://localhost:3000/api/forge/callback/oauth",
-        "FORGE_CLIENT_SECRET": "pqZ9CAngYfxbBhau",
+        "FORGE_CLIENT_SECRET": "lvooTENKPq3raWrp",
         "ASPNETCORE_URLS": "http://localhost:3000",
-        "FORGE_CLIENT_ID": "07ACAogp4iXV3heiOT0OkjuqvXJ6vpT2",
+        "FORGE_CLIENT_ID": "tpC1eigZ1hG7bD1KHxNIcpwB95CjMMC5",
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "jsWebView2Debugging": true
