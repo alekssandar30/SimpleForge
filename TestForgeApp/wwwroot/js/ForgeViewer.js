@@ -20,8 +20,6 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
-                'ToolbarExtension',
-                'BoundingBoxExtension',
             ],
             
         };
