@@ -1,9 +1,10 @@
 ﻿var viewer;
-var viewerApp;
 
 function launchViewer(urn) {
     var options = {
         env: 'AutodeskProduction',
+        // env: 'MD20Prod' + (atob(urn.replace('urn:', '').replace('_', '/')).indexOf('emea') > -1 ? 'EU' : 'US'),
+        // api: 'D3S',
         getAccessToken: getForgeToken,
         api: 'derivativeV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : ''),
         //api: 'streamingV2' + (atob(urn.replace('_', '/')).indexOf('emea') > -1 ? '_EU' : '')
@@ -52,16 +53,15 @@ function launchViewer(urn) {
 
 function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
-    var viewables = doc.getRoot().getDefaultGeometry();
+    // var viewables = doc.getRoot().getDefaultGeometry();
     //var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
 
-   
+    //TODO: check this
+    var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     viewer.loadDocumentNode(doc, viewables).then(i => {
-        // documented loaded, any action
-        console.log('************ VIEWABLES *****************')
-        console.log(viewables);
-
+        // any additional action here?
     });
+
 }
 
 function onDocumentLoadFailure(viewerErrorCode) {
