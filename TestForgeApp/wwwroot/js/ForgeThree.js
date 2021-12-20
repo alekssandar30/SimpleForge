@@ -1,10 +1,9 @@
 ﻿$(document).ready(function () {
 
     // first, check if current visitor is signed in
-    /*jQuery.ajax({
+    jQuery.ajax({
         url: '/api/forge/oauth/token',
         success: function (res) {
-            // yes, it is signed in...
             $('#signOut').show();
             $('#refreshHubs').show();
 
@@ -14,8 +13,6 @@
                     location.href = '/api/forge/oauth/signout';
                 });
                 $('#hiddenFrame').attr('src', 'https://accounts.autodesk.com/Authentication/LogOut');
-                // learn more about this signout iframe at
-                // https://forge.autodesk.com/blog/log-out-forge
             })
 
             // and refresh button
@@ -23,7 +20,6 @@
                 $('#userHubs').jstree(true).refresh();
             });
 
-            // finally:
             prepareUserHubsTree();
             showUser();
         }
@@ -36,7 +32,7 @@
                 location.href = url;
             }
         });
-    })*/
+    })
 
     prepareAppBucketTree();
     $('#refreshBuckets').click(function () {
