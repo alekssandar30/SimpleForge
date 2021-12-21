@@ -21,26 +21,26 @@ namespace forgeSample.Controllers
         [Route("api/forge/oauth/token")]
         public async Task<dynamic> GetPublicAsync()
         {
-            Credentials credentials = await Credentials.FromSessionAsync(Request.Cookies, Response.Cookies);
+            //Credentials credentials = await Credentials.FromSessionAsync(Request.Cookies, Response.Cookies);
 
-            if (credentials == null)
-            {
-                base.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                return new AccessToken();
-            }
-
-            return new AccessToken()
-            {
-                access_token = credentials.TokenPublic,
-                expires_in = (int)credentials.ExpiresAt.Subtract(DateTime.Now).TotalSeconds
-            };
-
-            //if (PublicToken == null || PublicToken.ExpiresAt < DateTime.UtcNow)
+            //if (credentials == null)
             //{
-            //    PublicToken = await Get2LeggedTokenAsync(new Scope[] { Scope.ViewablesRead });
-            //    PublicToken.ExpiresAt = DateTime.UtcNow.AddSeconds(PublicToken.expires_in);
+            //    base.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+            //    return new AccessToken();
             //}
-            //return PublicToken;
+
+            //return new AccessToken()
+            //{
+            //    access_token = credentials.TokenPublic,
+            //    expires_in = (int)credentials.ExpiresAt.Subtract(DateTime.Now).TotalSeconds
+            //};
+
+            if (PublicToken == null || PublicToken.ExpiresAt < DateTime.UtcNow)
+            {
+                PublicToken = await Get2LeggedTokenAsync(new Scope[] { Scope.ViewablesRead });
+                PublicToken.ExpiresAt = DateTime.UtcNow.AddSeconds(PublicToken.expires_in);
+            }
+            return PublicToken;
         }
 
 

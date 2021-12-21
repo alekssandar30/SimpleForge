@@ -2,20 +2,23 @@
 $(document).ready(function () {
     $('#searchProperties').click(function () {
         //var txtArea = document.getElementById("TextAreaResult");
-        const searchCategoryStr = document.getElementById("searchCategoryInput").value.toUpperCase();
+        const searchCategoryStr = document.getElementById("searchCategoryInput").value;
         const searchStr = document.getElementById("searchInput").value.toLowerCase();
 
         if (searchStr.length == 0 || searchCategoryStr.length == 0) {
             return;
         }
 
-        //viewerSearch(viewer, searchStr);
-
         viewer.search(searchStr, (dbIds) => {
-            // const categoryArray = ['Icon', 'Type', 'Required', 'Material', 'NAME', 'TYPE'];
-            const categoryArray = [searchCategoryStr, searchCategoryStr.toLowerCase(), searchCategoryStr.charAt(0).toUpperCase() + searchCategoryStr.toLowerCase().substring(1)];
-            console.log(searchStr);
-            console.log(categoryArray);
+            const categoryArray = [];
+
+            if (isTwoWordsCategory(searchCategoryStr)) {
+                const parsedCategory = parseCategory(searchCategoryStr);
+                categoryArray.push(parsedCategory);
+            }
+            else {
+                categoryArray.push(searchCategoryStr, searchCategoryStr.toLowerCase(), searchCategoryStr.toUpperCase(), searchCategoryStr.charAt(0).toUpperCase() + searchCategoryStr.toLowerCase().substring(1), searchCategoryStr.replace(/\s+/g, ''))
+            }
 
             viewer.model.getBulkProperties(dbIds, categoryArray, (elements) => {
                 let dbIdsToSelect = [];
@@ -30,14 +33,31 @@ $(document).ready(function () {
                     }
                 }
 
-                viewer.select(dbIdsToSelect);
-                //viewer.fitToView(dbIdsToSelect);
                 viewer.isolate(dbIdsToSelect);
             }, (e) => {
                 // error, handle here...
                 console.log(e);
             }, categoryArray);
         });
+
+        function isTwoWordsCategory(category) {
+            const words = category.split(' ');
+
+            return words.length > 1;
+        }
+
+
+        function parseCategory(category) {
+            const words = category.split(' ');
+            const parsedWords = [];
+
+            words.forEach((word) => {
+                word = word.charAt(0).toUpperCase() + word.toLowerCase().substring(1);
+                parsedWords.push(word);
+            });
+
+            return parsedWords.join(' ');
+        }
 
     });
 

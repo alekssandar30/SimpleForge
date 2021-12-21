@@ -23,6 +23,7 @@
     <script src="js/ForgeViewer.js"></script>
     <script src="js/SearchProps.js"></script>
     <script src="js/SlideResizer.js"></script>
+    <script src="js/ExcelTable.js"></script>
 
 
 </head>
@@ -49,6 +50,7 @@
                 <button type="button" id="searchProperties" class="btn btn-primary">
                     Search
                 </button>
+                <!--<button type="button" id="excelData" class="btn btn-secondary">Load data</button>-->
             </div>
         </div>
     </nav>
@@ -58,15 +60,19 @@
             <span id="userInfo"></span>
             <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
             <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
-            <!--<button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
-                    <span class="glyphicon glyphicon-folder-close"></span> New bucket
-                </button>
+            <button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
+                <span class="glyphicon glyphicon-folder-close"></span> New bucket
+            </button>
 
                 <div id="appBuckets">
                     tree here
+                </div>
+                <hr />
+                <!--<div id="linesFromDb">
+
                 </div>-->
 
-            <div id="userHubs">
+            <!--<div id="userHubs">
                 <div style="padding-top: 100px; text-align: center;">
                     <button class="btn btn-lg btn-default" id="autodeskSigninButton">
                         <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
@@ -77,7 +83,7 @@
                     <br /> You may also need to provision your<br /> BIM 360 Docs account for this app.<br />
                     <a href="https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps">Learn more</a>.
                 </div>
-            </div>
+            </div>-->
 
         </aside>
         <div class="resize-handle--x" data-target="aside"></div>

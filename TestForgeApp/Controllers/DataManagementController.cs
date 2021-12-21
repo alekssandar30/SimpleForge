@@ -1,12 +1,18 @@
 ﻿using Autodesk.Forge;
 using Autodesk.Forge.Model;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using ExcelToEnumerable;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using TestForgeApp.Helpers;
+using TestForgeApp.Models;
 
 namespace TestForgeApp.Controllers
 {
@@ -49,6 +55,21 @@ namespace TestForgeApp.Controllers
 
             return nodes;
         }
+
+
+        [HttpGet]
+        [Route("/api/data/excel")]
+        public IActionResult GetDataFromExcel()
+        {
+            string text = "";
+            string fileName = @"D:\Posao\TestForgeApp\TestForgeApp\TestForgeApp\wwwroot\Uploads\ZgLines.xlsx";
+
+            IEnumerable<Line> lines = fileName.ExcelToEnumerable<Line>();
+
+            return Ok(lines);
+            
+        }
+
 
 
         private async Task<IList<jsTreeNode>> GetHubsAsync()

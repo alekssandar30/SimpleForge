@@ -1,29 +1,29 @@
 ﻿$(document).ready(function () {
 
     // first, check if current visitor is signed in
-    jQuery.ajax({
-        url: '/api/forge/oauth/token',
-        success: function (res) {
-            $('#signOut').show();
-            $('#refreshHubs').show();
+    //jQuery.ajax({
+    //    url: '/api/forge/oauth/token',
+    //    success: function (res) {
+    //        $('#signOut').show();
+    //        $('#refreshHubs').show();
 
-            // prepare sign out
-            $('#signOut').click(function () {
-                $('#hiddenFrame').on('load', function (event) {
-                    location.href = '/api/forge/oauth/signout';
-                });
-                $('#hiddenFrame').attr('src', 'https://accounts.autodesk.com/Authentication/LogOut');
-            })
+    //        // prepare sign out
+    //        $('#signOut').click(function () {
+    //            $('#hiddenFrame').on('load', function (event) {
+    //                location.href = '/api/forge/oauth/signout';
+    //            });
+    //            $('#hiddenFrame').attr('src', 'https://accounts.autodesk.com/Authentication/LogOut');
+    //        })
 
-            // and refresh button
-            $('#refreshHubs').click(function () {
-                $('#userHubs').jstree(true).refresh();
-            });
+    //        // and refresh button
+    //        $('#refreshHubs').click(function () {
+    //            $('#userHubs').jstree(true).refresh();
+    //        });
 
-            prepareUserHubsTree();
-            showUser();
-        }
-    });
+    //        prepareUserHubsTree();
+    //        showUser();
+    //    }
+    //});
 
     $('#autodeskSigninButton').click(function () {
         jQuery.ajax({
