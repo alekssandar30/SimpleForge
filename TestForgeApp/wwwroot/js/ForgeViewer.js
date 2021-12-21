@@ -53,11 +53,10 @@ function launchViewer(urn) {
 
 function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
-    // var viewables = doc.getRoot().getDefaultGeometry();
+     var viewables = doc.getRoot().getDefaultGeometry();
     //var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
 
-    //TODO: check this
-    var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
+    //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     viewer.loadDocumentNode(doc, viewables).then(i => {
         // any additional action here?
     });
