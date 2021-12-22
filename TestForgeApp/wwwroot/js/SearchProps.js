@@ -23,6 +23,7 @@ $(document).ready(function () {
         const searchWords = searchStr.split(',');
 
         // multifunctional search
+        // TODO: refactor this to work with only 1 function 
         if (searchWords.length > 1) {
             const word1 = searchWords[0];
             const word2 = searchWords[1];
