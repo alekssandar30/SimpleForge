@@ -53,6 +53,7 @@ class LabelsExtension extends Autodesk.Viewing.Extension {
 
 	onClickAddLabel(e) {
 		const dbid = e.selections[0].dbIdArray[0]; // triggered on LMV's Aggregate-Selection event
+		console.log(e.selections[0]);
 		this.addLabel(`object with dbId: ${dbid}`, this.computeCenterPoint(dbid));
 		viewer.applyCamera(viewer.impl.camera); //trigger a camera change event
 	}
