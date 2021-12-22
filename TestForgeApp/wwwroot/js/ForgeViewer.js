@@ -21,6 +21,7 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
+                'IssuesExtension',
             ],
             
         };
@@ -53,7 +54,8 @@ function launchViewer(urn) {
 
 function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
-     var viewables = doc.getRoot().getDefaultGeometry();
+    var viewables = doc.getRoot().getDefaultGeometry();
+    viewer.fitToView();
     //var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
 
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());

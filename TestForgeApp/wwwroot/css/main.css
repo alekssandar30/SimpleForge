@@ -12,9 +12,16 @@ body {
 }
 
 #appBuckets {
-    overflow: auto;
     width: 100%;
-    height: calc(100vh - 150px);
+    height: 20%;
+    margin-top: 2rem;
+}
+
+#linesFromDb {
+    width: 100%;
+    height: 30%;
+    padding: 5px;
+    overflow: auto;
 }
 
 #forgeViewer {
@@ -44,7 +51,6 @@ body {
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-    overflow: auto;
     background-color: white;
     padding: 10px;
 }
