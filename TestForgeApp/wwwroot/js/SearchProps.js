@@ -75,7 +75,6 @@ $(document).ready(function () {
         }
         else {
             viewer.search(searchStr, (dbIds) => {
-
                 viewer.model.getBulkProperties(dbIds, categoryArray, (elements) => {
                     for (var i = 0; i < elements.length; i++) {
                         for (var j = 0; j < elements[i].properties.length; j++) {

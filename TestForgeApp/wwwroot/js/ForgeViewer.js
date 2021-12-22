@@ -21,7 +21,7 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
-                'IssuesExtension',
+                'LabelsExtension',
             ],
             
         };
@@ -29,9 +29,8 @@ function launchViewer(urn) {
         var htmlDiv = document.getElementById('forgeViewer');
 
         viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
-        viewer.setQualityLevel(/* ambient shadows */ false, /* antialiasing */ true);
-        viewer.setGroundReflection(false);
-        viewer.setGhosting(true);
+ 
+        viewer.setTheme("light-theme");
         //const profileSettings = Autodesk.Viewing.ProfileSettings.Navis;
         //const profile = new Autodesk.Viewing.Profile(profileSettings);
         //viewer.setProfile(profile);
@@ -47,6 +46,7 @@ function launchViewer(urn) {
         console.log('Initialization complete, loading a model next...');
 
         Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
+        viewer.addEventListener(Autodesk.Viewing.GEOMETRY_LOADED_EVENT, e => onLoadFinished());
 
     });
 }
@@ -55,6 +55,7 @@ function launchViewer(urn) {
 function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     var viewables = doc.getRoot().getDefaultGeometry();
+    doc.downloadAecModelData();
     viewer.fitToView();
     //var viewables = viewerApp.bubble.search({ 'type': 'geometry' });
 
@@ -63,6 +64,27 @@ function onDocumentLoadSuccess(doc) {
         // any additional action here?
     });
 
+}
+
+function onLoadFinished() {
+
+    // improve performance, by turning off FX
+    // window.devicePixelRatio = 1.0;
+    viewer.impl.setOptimizeNavigation(true); // turn off SAO when camera moves
+    viewer.setQualityLevel(true, true); // activate ambient occlusion and FXAA
+    viewer.impl.toggleEnvMapBackground(false); // reduce the effort on your fragment shader.
+
+    // reduce draw calls
+    viewer.impl.toggleGroundShadow(false); // turn off that ground shadow render pass
+
+    // create our floating text labels
+    let labels = [
+        { dbid: 2467, id: "cylinder" }, { 2525: 3, id: "cylinder" }, { 4208: 4, id: "rm" },
+    ];
+
+    const ext = viewer.getExtension("LabelsExtension");
+    ext.initLabels(labels);
+    viewer.addEventListener(Autodesk.Viewing.AGGREGATE_SELECTION_CHANGED_EVENT, e => ext.onClickAddLabel(e));
 }
 
 function onDocumentLoadFailure(viewerErrorCode) {

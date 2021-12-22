@@ -162,7 +162,6 @@ function prepareAppBucketTree() {
             $("#forgeViewer").empty();
             var urn = data.node.id;
             getForgeToken(function (access_token) {
-                console.log('access_token: ' + access_token);
                 jQuery.ajax({
                     url: 'https://developer.api.autodesk.com/modelderivative/v2/designdata/' + urn + '/manifest',
                     headers: { 'Authorization': 'Bearer ' + access_token },
