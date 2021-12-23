@@ -3,11 +3,13 @@ using Autodesk.Forge.Model;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using ExcelToEnumerable;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -23,6 +25,12 @@ namespace TestForgeApp.Controllers
     public class DataManagementController : ControllerBase
     {
         private Credentials Credentials { get; set; }
+        private IWebHostEnvironment _hostEnvironment;
+
+        public DataManagementController(IWebHostEnvironment environment)
+        {
+            _hostEnvironment = environment;
+        }
 
 
         [HttpGet]
@@ -61,10 +69,9 @@ namespace TestForgeApp.Controllers
         [Route("/api/data/excel")]
         public IActionResult GetDataFromExcel()
         {
-            string text = "";
-            string fileName = @"D:\Posao\TestForgeApp\TestForgeApp\TestForgeApp\wwwroot\Uploads\ZgLines.xlsx";
+            string path = Path.Combine(_hostEnvironment.WebRootPath, @"Uploads\ZgLines.xlsx");
 
-            IEnumerable<Line> lines = fileName.ExcelToEnumerable<Line>();
+            IEnumerable<Line> lines = path.ExcelToEnumerable<Line>();
 
             return Ok(lines);
             
