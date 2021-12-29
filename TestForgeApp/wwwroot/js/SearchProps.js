@@ -23,56 +23,36 @@ $(document).ready(function () {
         const searchWords = searchStr.split(',');
 
         // multifunctional search
-        // TODO: refactor this to work with only 1 function 
         if (searchWords.length > 1) {
             const word1 = searchWords[0];
             const word2 = searchWords[1];
+            const word3 = searchWords[2];
+            const word4 = searchWords[3];
+            const word5 = searchWords[4];
 
-            //const results1 = searchForProperty(word1);
-            //const results2 = searchForProperty(word2);
+            const results1 = searchForProperty(word1);
+            const results2 = searchForProperty(word2);
+            let results3 = [];
+            let results4 = [];
+            let results5 = [];
 
-            //dbIdsToSelect.push(...results1, ...results2);
+            if (word3) {
+                results3 = searcForProperty(word3);
+            }
 
-            //viewer.isolate(dbIdsToSelect);
+            if (word4) {
+                results4 = searchForProperty(word4);
+            }
 
-            viewer.search(word1, (dbIds) => {
-                viewer.model.getBulkProperties(dbIds, categoryArray, (elements) => {
-                    for (var i = 0; i < elements.length; i++) {
-                        for (var j = 0; j < elements[i].properties.length; j++) {
-                            const propertyValue = elements[i].properties[j].displayValue.toString().toLowerCase();
+            if (word5) {
+                results5 = searchForProperty(word5);
+            }
 
-                            if (propertyValue.indexOf(word1) !== -1) {
-                                dbIdsToSelect.push(elements[i].dbId);
-                            }
-                        }
-                    }
+            dbIdsToSelect.push(...results1, ...results2, ...results3, ...results4, ...results5);
+            console.log(dbIdsToSelect);
+            viewer.isolate(dbIdsToSelect);
+            viewer.select(dbIdsToSelect);
 
-                    viewer.search(word2, (dbIds) => {
-                        viewer.model.getBulkProperties(dbIds, categoryArray, (elements) => {
-                            for (var i = 0; i < elements.length; i++) {
-                                for (var j = 0; j < elements[i].properties.length; j++) {
-                                    const propertyValue = elements[i].properties[j].displayValue.toString().toLowerCase();
-
-                                    if (propertyValue.indexOf(word2) !== -1) {
-                                        dbIdsToSelect.push(elements[i].dbId);
-                                    }
-                                }
-                            }
-
-                            viewer.isolate(dbIdsToSelect);
-                        }, (e) => {
-                            // error, handle here...
-                            console.log(e);
-                        }, categoryArray);
-                    });
-
-                    //viewer.isolate(dbIdsToSelect);
-                }, (e) => {
-                    // error, handle here...
-                    console.log(e);
-                }, categoryArray);
-            });
-            
         }
         else {
             viewer.search(searchStr, (dbIds) => {
