@@ -11,6 +11,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
+    <!--Chart JS  packages-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+    <script src="https://unpkg.com/jspdf/dist/jspdf.min.js"></script>
+
     <!-- The Viewer CSS -->
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
 
@@ -22,50 +27,58 @@
 
     <!-- this project files -->
     <link href="css/main.css" rel="stylesheet" />
+    <link href="css/SidePanel.css" rel="stylesheet" />
+    <link href="css/Dashboard.css" rel="stylesheet" />
+
+    <!--Dashboard js-->
+    <script src="js/Dashboard/Dashboard.js"></script>
+    <script src="js/Dashboard/DashboardPanel.js"></script>
+    <script src="js/Dashboard/PanelBarChart.js"></script>
+    <script src="js/Dashboard/PanelPieChart.js"></script>
+
     <script src="js/ForgeThree.js"></script>
     <script src="js/ForgeViewer.js"></script>
     <script src="js/SearchProps.js"></script>
     <script src="js/SlideResizer.js"></script>
     <script src="js/ExcelTable.js"></script>
 
-    <!-- Styling for 3D Labels -->
-    <style>
-        .label:hover {
-            font-size: 14px;
-            z-index: 2;
-            width: 36px;
-            opacity: 0.8;
-            background-color: grey;
-            border: 3px solid white
-        }
-
-        .label:focus {
-            font-size: 16px;
-            z-index: 2;
-            width: 36px;
-            opacity: 1;
-            background-color: brown;
-            border: 4px solid white;
-            outline: none;
-        }
-
-        .label {
-            width: 150px;
-            font-size: 12px;
-            overflow: hidden;
-            border: 1px solid white;
-            border-radius: 10px;
-            background: black;
-            color: white;
-            padding: 0 8px 0 8px;
-            opacity: 0.6;
-        }
-    </style>
+    <!-- 2D Viewer extension (NestedViewer) -->
+    <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/NestedViewerExtension/contents/main.css">
+    <script src="//cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/NestedViewerExtension/contents/main.js"></script>-->
 
 
 </head>
 
 <body>
+    <div id="mySidepanel" class="sidepanel">
+        <div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+            <div class="sidepanel-section">
+                <div id="searchInputs" style="margin-top: 4rem;">
+                    <div class="form-outline searchInput">
+                        <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
+                    </div>
+                    <div class="form-outline searchInput">
+                        <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
+                    </div>
+
+                </div>
+                <!--<div class="addSearchInput" onclick="addSearchInput()">
+                    <img src="assets/plus-circle.svg" alt="add" />
+                </div>-->
+                <button type="button" id="searchProperties" class="btn btn-primary" style="position: absolute; top: 390px; right: 5px; width: 97%; padding: 2px;">
+                    Search
+                </button>
+            </div>
+            <div class="sidepanel-section">
+                <div id="linesFromDb">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <ul class="nav navbar-nav left">
@@ -78,22 +91,14 @@
 
             </ul>
             <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 5px;">
-                <div class="form-outline">
-                    <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
-                </div>
-                <div class="form-outline">
-                    <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
-                </div>
-                <button type="button" id="searchProperties" class="btn btn-primary">
-                    Search
-                </button>
-                <!--<button type="button" id="excelData" class="btn btn-secondary">Load data</button>-->
+                
+                <button class="openbtn" onclick="openNav()">☰ Dashboard</button>
             </div>
         </div>
     </nav>
     <!-- End of navbar -->
     <div class="container">
-        <aside style="padding-top: 1rem; width: 25%;">
+        <aside style="padding-top: 1rem; width: 20%;">
             <span id="userInfo"></span>
             <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
             <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
@@ -104,13 +109,7 @@
             <div id="appBuckets">
                 tree here
             </div>
-            <hr />
-            <div id="linesFromDb">
-            </div>
-            <hr />
-            <div id="dashboard">
-                <h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Dashboard</h5>
-            </div>
+
             <!--<div id="userHubs">
                 <div style="padding-top: 100px; text-align: center;">
                     <button class="btn btn-lg btn-default" id="autodeskSigninButton">
@@ -135,6 +134,7 @@
     <form id="uploadFile" enctype="multipart/form-data">
         <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden" />
     </form>
+   
     <!-- Modal Create Bucket -->
     <div class="modal fade" id="createBucketModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -168,22 +168,29 @@
     <!--Extensions-->
     <script src="js/extensions/ToolbarExtension.js"></script>
     <script src="js/extensions/labelsExtension.js"></script>
-
-
-
-    <!--<script src="js/extensions/ForgeIssuesExtension.js"></script>
+    <script src="js/extensions/VersionChangeExtension.js"></script>
 
     <script>
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "400px";
         }
-    </script>-->
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        function addSearchInput() {
+            var cnt = 2;
+            var newInput = `
+                <div class="form-outline searchInput">
+                    <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
+                </div>
+            `;
+            cnt++;
+            $('#searchInputs').append(newInput);
+        }
+    </script>
 
 
 </body>

@@ -47,6 +47,10 @@
         $("#newBucketKey").focus();
     })
 
+    $('#snapshotBtn').click(function () {
+        snapshot();
+    })
+
 
     // ***************************************** UPLOAD TO BUCKET **************************************
 

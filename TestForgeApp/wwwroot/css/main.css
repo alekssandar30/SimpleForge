@@ -156,3 +156,46 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.label:hover {
+    font-size: 14px;
+    z-index: 2;
+    width: 36px;
+    opacity: 0.8;
+    background-color: grey;
+    border: 3px solid white
+}
+
+.label:focus {
+    font-size: 16px;
+    z-index: 2;
+    width: 36px;
+    opacity: 1;
+    background-color: brown;
+    border: 4px solid white;
+    outline: none;
+}
+
+.label {
+    width: 150px;
+    font-size: 12px;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    padding: 0 8px 0 8px;
+    opacity: 0.6;
+}
+
+.searchInput {
+    margin-bottom: 5px;
+}
+
+.addSearchInput {
+    margin-bottom: 5px;
+}
+
+.addSearchInput:hover {
+    cursor: pointer;
+}
