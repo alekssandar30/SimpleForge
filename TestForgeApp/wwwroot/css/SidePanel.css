@@ -3,7 +3,6 @@
 
 
 .sidepanel {
-    width: 400px;
     position: fixed;
     z-index: 10;
     height: 100vh;

@@ -199,3 +199,11 @@ body {
 .addSearchInput:hover {
     cursor: pointer;
 }
+
+.removeSearchInput:hover {
+    cursor: pointer;
+}
+
+.zg_line:hover {
+    cursor: pointer;
+}

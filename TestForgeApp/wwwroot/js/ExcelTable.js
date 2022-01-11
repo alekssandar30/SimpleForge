@@ -11,7 +11,7 @@
                 content += `
                    
                     <tbody>
-                        <tr style="padding: .3rem;" id="line">
+                        <tr style="padding: .3rem;" class="zg_line" id="line">
                             <td>${data[i].lineNumber}</td>
                             <td>${data[i].width}</td>
                             <td>${data[i].height}</td>
@@ -43,12 +43,11 @@
         }
     });
 
-    
 });
 
 
 $(document).ready(function () {
-    $('#linesFromDb').on('click', 'line', function (e) {
-        alert('kliik');
-    });
+    $('#line').click(function (e) {
+        alert('klik ' + e);
+    })
 });

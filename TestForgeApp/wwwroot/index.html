@@ -15,6 +15,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
     <script src="https://unpkg.com/jspdf/dist/jspdf.min.js"></script>
+    <script src="js/async.min.js"></script>
 
     <!-- The Viewer CSS -->
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
@@ -55,18 +56,25 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 
             <div class="sidepanel-section">
-                <div id="searchInputs" style="margin-top: 4rem;">
-                    <div class="form-outline searchInput">
-                        <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
-                    </div>
+                <div class="form-outline searchInput" style="margin-top: 4rem;">
+                    <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
+                </div>
+                <div id="searchInputs">
+
                     <div class="form-outline searchInput">
                         <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
                     </div>
 
                 </div>
-                <!--<div class="addSearchInput" onclick="addSearchInput()">
-                    <img src="assets/plus-circle.svg" alt="add" />
-                </div>-->
+                <div style="display: flex; flex-direction: row; justify-content: space-between">
+                    <div class="addSearchInput" onclick="addSearchInput()">
+                        <img src="assets/plus-circle.svg" alt="add" />
+                    </div>
+                    <div class="removeSearchInput" onclick="removeSearchInput()">
+                        <img src="assets//minus-circle.svg" alt="remove" />
+                    </div>
+                </div>
+                
                 <button type="button" id="searchProperties" class="btn btn-primary" style="position: absolute; top: 390px; right: 5px; width: 97%; padding: 2px;">
                     Search
                 </button>
@@ -91,7 +99,7 @@
 
             </ul>
             <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 5px;">
-                
+
                 <button class="openbtn" onclick="openNav()">☰ Dashboard</button>
             </div>
         </div>
@@ -134,7 +142,7 @@
     <form id="uploadFile" enctype="multipart/form-data">
         <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden" />
     </form>
-   
+
     <!-- Modal Create Bucket -->
     <div class="modal fade" id="createBucketModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -169,6 +177,7 @@
     <script src="js/extensions/ToolbarExtension.js"></script>
     <script src="js/extensions/labelsExtension.js"></script>
     <script src="js/extensions/VersionChangeExtension.js"></script>
+    <script src="js/extensions/ChartExtension.js"></script>
 
     <script>
 
@@ -183,13 +192,20 @@
         function addSearchInput() {
             var cnt = 2;
             var newInput = `
-                <div class="form-outline searchInput">
-                    <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
-                </div>
-            `;
+                        <div class="form-outline searchInput">
+                            <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
+                        </div>
+                    `;
             cnt++;
             $('#searchInputs').append(newInput);
         }
+
+        function removeSearchInput() {
+            let searchInputs = document.getElementById("searchInputs");
+
+            searchInputs.children[searchInputs.children.length - 1].remove();
+        }
+
     </script>
 
 

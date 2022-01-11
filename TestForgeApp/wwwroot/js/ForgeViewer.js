@@ -24,6 +24,7 @@ function launchViewer(urn) {
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
                 'Autodesk.VisualClusters',
+                'Autodesk.ADN.Viewing.Extension.Chart',
                 //'Autodesk.Forge.Samples.VersionChanges',
                 //'LabelsExtension',
             ],
