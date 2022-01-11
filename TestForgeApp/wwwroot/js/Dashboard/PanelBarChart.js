@@ -13,13 +13,9 @@ class BarChart extends DashboardPanelChart {
 
     drawChart() {
         var _this = this; // need this for the onClick event
-        console.log(_this);
+        console.log(_this);        
 
-        var div = document.getElementById(_this.divId);
-        console.log(div);
-        
-
-        var canvas = document.getElementById(this.canvasId);
+        var canvas = document.querySelector('canvas');
 
         if (!canvas.getContext) {
             alert('Error: Canvas context does not exist!');

@@ -15,9 +15,7 @@ class PieChart extends DashboardPanelChart {
         var _this = this; // need this for the onClick event
 
         //var ctx = document.getElementsByClassName('canvas').getContext('2d');
-        var canvas = document.getElementsByClassName('.canvas');
-        console.log('******************88 CANVAS **************************');
-        console.log(canvas);
+        var canvas = document.querySelector('canvas');
         var ctx = canvas.getContext('2d');
         if (this.chart !== undefined) this.chart.destroy();
         var colors = this.generateColors(this.modelData.getLabels(this.propertyToUse).length);

@@ -104,7 +104,6 @@ class ModelData {
                         _this._modelData["Family Name"][familyName].push(props.dbId);
                     });
 
-                    console.log(count);
 
                     if ((--count) == 0) {
                         callback();
