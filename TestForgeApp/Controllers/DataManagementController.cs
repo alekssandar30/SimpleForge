@@ -1,38 +1,26 @@
-﻿using Autodesk.Forge;
-using Autodesk.Forge.Model;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
-using ExcelToEnumerable;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Autodesk.Forge;
+using Autodesk.Forge.Model;
+using Newtonsoft.Json.Linq;
+using System.Net;
 using TestForgeApp.Helpers;
-using TestForgeApp.Models;
 
-namespace TestForgeApp.Controllers
+namespace bim360issues.Controllers
 {
-    // controller for managing hubs, folders, buckets, projects in BIM360
-
-    [Route("api/[controller]")]
-    [ApiController]
     public class DataManagementController : ControllerBase
     {
+        /// <summary>
+        /// Credentials on this request
+        /// </summary>
         private Credentials Credentials { get; set; }
-        private IWebHostEnvironment _hostEnvironment;
 
-        public DataManagementController(IWebHostEnvironment environment)
-        {
-            _hostEnvironment = environment;
-        }
-
-
+        /// <summary>
+        /// GET TreeNode passing the ID
+        /// </summary>
         [HttpGet]
         [Route("api/forge/datamanagement")]
         public async Task<IList<jsTreeNode>> GetTreeNodeAsync(string id)
@@ -42,7 +30,7 @@ namespace TestForgeApp.Controllers
 
             IList<jsTreeNode> nodes = new List<jsTreeNode>();
 
-            if (id == "#") // root node
+            if (id == "#") // root
                 return await GetHubsAsync();
             else
             {
@@ -64,21 +52,6 @@ namespace TestForgeApp.Controllers
             return nodes;
         }
 
-
-        [HttpGet]
-        [Route("/api/data/excel")]
-        public IActionResult GetDataFromExcel()
-        {
-            string path = Path.Combine(_hostEnvironment.WebRootPath, @"Uploads\ZgLines.xlsx");
-
-            IEnumerable<Line> lines = path.ExcelToEnumerable<Line>();
-
-            return Ok(lines);
-            
-        }
-
-
-
         private async Task<IList<jsTreeNode>> GetHubsAsync()
         {
             IList<jsTreeNode> nodes = new List<jsTreeNode>();
@@ -95,10 +68,10 @@ namespace TestForgeApp.Controllers
                 switch ((string)hubInfo.Value.attributes.extension.type)
                 {
                     case "hubs:autodesk.core:Hub":
-                        nodeType = "hubs"; // if showing only BIM 360, mark this as 'unsupported'
+                        nodeType = "unsupported";
                         break;
                     case "hubs:autodesk.a360:PersonalHub":
-                        nodeType = "personalHub"; // if showing only BIM 360, mark this as 'unsupported'
+                        nodeType = "unsupported";
                         break;
                     case "hubs:autodesk.bim360:Account":
                         nodeType = "bim360Hubs";
@@ -223,15 +196,17 @@ namespace TestForgeApp.Controllers
                                     // ready!
 
                                     // let's return for the jsTree with a special id:
-                                    // itemUrn|versionUrn|viewableId
+                                    // itemUrn|versionUrn|viewableId|versionNumber
                                     // itemUrn: used as target_urn to get document issues
                                     // versionUrn: used to launch the Viewer
                                     // viewableId: which viewable should be loaded on the Viewer
+                                    // versionNumber: version number of the document
                                     // this information will be extracted when the user click on the tree node, see ForgeTree.js:136 (activate_node.jstree event handler)
-                                    string treeId = string.Format("{0}|{1}|{2}",
+                                    string treeId = string.Format("{0}|{1}|{2}|{3}",
                                         folderContentItem.Value.id, // item urn
                                         Base64Encode(folderContentItem1.Value.relationships.tip.data.id), // version urn
-                                        includedItem.Value.attributes.extension.data.viewableId // viewableID
+                                        includedItem.Value.attributes.extension.data.viewableId, // viewableID
+                                        includedItem.Value.attributes.versionNumber
                                     );
                                     nodes.Add(new jsTreeNode(treeId, WebUtility.UrlDecode(includedItem.Value.attributes.name), "bim360documents", false));
                                 }
@@ -247,6 +222,13 @@ namespace TestForgeApp.Controllers
             }
 
             return nodes;
+        }
+
+        private string GetName(DynamicDictionaryItems folderIncluded, KeyValuePair<string, dynamic> folderContentItem)
+        {
+
+
+            return "N/A";
         }
 
         private async Task<IList<jsTreeNode>> GetItemVersions(string href)
