@@ -9,7 +9,7 @@ using System.Text;
 using System.Net;
 using TestForgeApp.Helpers;
 
-namespace bim360issues.Controllers
+namespace TestForgeApp.Controllers
 {
     public class BIM360Controller : ControllerBase
     {

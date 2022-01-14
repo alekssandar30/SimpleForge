@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TestForgeApp.Models.dto;
 
-namespace forgeSample.Controllers
+namespace TestForgeApp.Controllers
 {
     // controller for translating uploaded model...
 

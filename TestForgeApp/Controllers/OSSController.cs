@@ -12,7 +12,7 @@ using TestForgeApp.Helpers;
 using TestForgeApp.Models;
 using TestForgeApp.Models.dto;
 
-namespace forgeSample.Controllers
+namespace TestForgeApp.Controllers
 {
     // controller for creating buckets and uploading models...
 

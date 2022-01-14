@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 using TestForgeApp.Helpers;
 using TestForgeApp.Models.dto;
 
-namespace forgeSample.Controllers
+namespace TestForgeApp.Controllers
 {
-    // simple auth implemented here...
 
     [ApiController]
     public class OAuthController : ControllerBase
@@ -18,8 +17,22 @@ namespace forgeSample.Controllers
         private static dynamic PublicToken { get; set; }
 
         [HttpGet]
-        [Route("api/forge/oauth/token")]
+        [Route("api/forge/oauth2/token")]
         public async Task<dynamic> GetPublicAsync()
+        {
+            
+            if (PublicToken == null || PublicToken.ExpiresAt < DateTime.UtcNow)
+            {
+                PublicToken = await Get2LeggedTokenAsync(new Scope[] { Scope.ViewablesRead });
+                PublicToken.ExpiresAt = DateTime.UtcNow.AddSeconds(PublicToken.expires_in);
+            }
+
+            return PublicToken;
+        }
+
+        [HttpGet]
+        [Route("api/forge/oauth3/token")]
+        public async Task<dynamic> GetTokenAsync()
         {
             Credentials credentials = await Credentials.FromSessionAsync(Request.Cookies, Response.Cookies);
 
@@ -34,15 +47,7 @@ namespace forgeSample.Controllers
                 access_token = credentials.TokenPublic,
                 expires_in = (int)credentials.ExpiresAt.Subtract(DateTime.Now).TotalSeconds
             };
-
-            //if (PublicToken == null || PublicToken.ExpiresAt < DateTime.UtcNow)
-            //{
-            //    PublicToken = await Get2LeggedTokenAsync(new Scope[] { Scope.ViewablesRead });
-            //    PublicToken.ExpiresAt = DateTime.UtcNow.AddSeconds(PublicToken.expires_in);
-            //}
-            //return PublicToken;
         }
-
 
         /// <summary>
         /// Endpoint for logout from bim360
