@@ -25,7 +25,7 @@ body {
 }
 
 #forgeViewer {
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     margin: 0;
 }
@@ -38,7 +38,7 @@ body {
 
 .loginBtn {
     width: 200px;
-    height: 30px;
+    height: 35px;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
@@ -84,6 +84,35 @@ body {
 .container > main {
     padding-right: 10px;
     overflow: auto;
+}
+
+.viewerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100% !important;
+}
+
+.leftWrapper {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20%;
+    background-color: #F8F8F8;
+}
+
+.rightWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20%;
+    background-color: #F8F8F8;
 }
 
 .leftSidebar {

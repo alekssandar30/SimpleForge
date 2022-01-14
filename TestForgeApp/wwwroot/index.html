@@ -12,6 +12,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
     <!--Chart JS  packages-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
@@ -26,7 +27,6 @@
 
     <script src="lib/lodash.js/lodash.js"></script>
     <!--<script src="markupExt.js"></script>-->
-
     <!-- this project files -->
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/SidePanel.css" rel="stylesheet" />
@@ -41,9 +41,8 @@
     <script src="js/ForgeThree.js"></script>
     <script src="js/ForgeViewer.js"></script>
     <script src="js/SearchProps.js"></script>
-    <script src="js/SlideResizer.js"></script>
-    <!--<script src="js/ExcelTable.js"></script>  TODO: implement this later --> 
-
+    <!--<script src="js/SlideResizer.js"></script>-->
+    <!--<script src="js/ExcelTable.js"></script>  TODO: implement this later -->
     <!-- 2D Viewer extension (NestedViewer) -->
     <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/NestedViewerExtension/contents/main.css">
     <script src="//cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/NestedViewerExtension/contents/main.js"></script>-->
@@ -54,7 +53,7 @@
 <body>
     <!--<div id="mySidepanel" class="sidepanel">
         <div>
-            
+
             <div class="sidepanel-section">
                 <div id="linesFromDb">
                 </div>
@@ -75,18 +74,18 @@
 
             </ul>
             <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 15px;">
-                <button class="btn loginBtn" id="autodeskSigninButton">
+                <button class="btn btn-default loginBtn" id="autodeskSigninButton">
                     <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
                          height="20"> Sign in
                 </button>
-                <button class="btn openbtn" onclick="openNav()">☰ Dashboard</button>
+                <!--<button class="btn openbtn" onclick="openNav()">☰ Dashboard</button>-->
             </div>
         </div>
     </nav>
     <!-- End of navbar -->
-    <div class="container">
 
-        <aside class="leftSidebar">
+    <div data-role="splitter" style="height: 100%; width: 100%;">
+        <div class="leftWrapper">
             <span id="userInfo"></span>
             <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
             <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
@@ -101,57 +100,47 @@
 
 
             <div id="userHubs">
-                
+
             </div>
-
-
-        </aside>
-
-        <div class="resize-handle--x" data-target="aside"></div>
-
-        <!--Viewer-->
-        <div style="position: relative; width: 70%">
-            <div id="forgeViewer"></div>
 
         </div>
+        <div class="viewerContainer">
+                <div id="forgeViewer" style="width: 100%"></div>
+        </div>
+            
+        <div class="rightWrapper">
+            <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <br />-->
 
-        <div class="resize-handle--x" data-target="aside"></div>
-
-        <!--Dashboard-->
-        <aside id="mySidepanel" class="rightSidebar">
-            <div>
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <br />
-
-                <div class="sidepanel-section">
-                    <div class="form-outline searchInput" style="margin-top: 4rem;">
-                        <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
-                    </div>
-                    <div id="searchInputs">
-
-                        <div class="form-outline searchInput">
-                            <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
-                        </div>
-
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content: space-between">
-                        <div class="addSearchInput" onclick="addSearchInput()">
-                            <img src="assets/plus-circle.svg" alt="add" />
-                        </div>
-                        <div class="removeSearchInput" onclick="removeSearchInput()">
-                            <img src="assets//minus-circle.svg" alt="remove" />
-                        </div>
-                    </div>
-
-                    <button type="button" id="searchProperties" class="btn btn-primary" style="width: 97%; padding: 2px;">
-                        Search
-                    </button>
+            <div class="sidepanel-section">
+                <div class="form-outline searchInput" style="margin-top: 4rem;">
+                    <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
                 </div>
+                <div id="searchInputs">
+
+                    <div class="form-outline searchInput">
+                        <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
+                    </div>
+
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-between">
+                    <div class="addSearchInput" onclick="addSearchInput()">
+                        <img src="assets/plus-circle.svg" alt="add" />
+                    </div>
+                    <div class="removeSearchInput" onclick="removeSearchInput()">
+                        <img src="assets//minus-circle.svg" alt="remove" />
+                    </div>
+                </div>
+
+                <button type="button" id="searchProperties" class="btn btn-primary" style="width: 97%; padding: 2px;">
+                    Search
+                </button>
             </div>
-        </aside>
-
-
+                   
+        </div>
     </div>
+
+      
     <form id="uploadFile" enctype="multipart/form-data">
         <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden" />
     </form>
@@ -191,7 +180,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    
+
                 </div>
                 <div class="modal-body">
                     <p>
@@ -298,7 +287,7 @@
         </div>
     </div>
 
-
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <!--<script src="https://petrbroz.github.io/forge-viewer-utils/master/Utilities.js"></script>-->
     <!--<script src="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/CustomPropertiesExtension/contents/main.js"></script>-->
     <!--Extensions-->
@@ -322,10 +311,10 @@
         function addSearchInput() {
             var cnt = 2;
             var newInput = `
-                <div class="form-outline searchInput">
-                <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
-                </div>
-            `;
+                    <div class="form-outline searchInput">
+                    <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
+                    </div>
+                `;
             cnt++;
             $('#searchInputs').append(newInput);
         }
