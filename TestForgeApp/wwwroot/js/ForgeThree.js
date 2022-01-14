@@ -2,7 +2,7 @@
 
     // first, check if current visitor is signed in
     jQuery.ajax({
-        url: '/api/forge/oauth/token',
+        url: '/api/forge/oauth3/token',
         success: function (res) {
             // yes, it is signed in...
             $('#signOut').show();
@@ -45,27 +45,22 @@
             $('#userHubs').jstree(true).refresh();
         });
     });
-});
-
-    //prepareAppBucketTree();
-    //$('#refreshBuckets').click(function () {
-    //    $('#appBuckets').jstree(true).refresh();
-    //});
-
-    //$('#createNewBucket').click(function () {
-    //    createNewBucket();
-    //});
-
-    //$('#createBucketModal').on('shown.bs.modal', function () {
-    //    $("#newBucketKey").focus();
-    //})
-
-    //$('#snapshotBtn').click(function () {
-    //    snapshot();
-    //})
 
 
-    // ***************************************** UPLOAD TO BUCKET **************************************
+    prepareAppBucketTree();
+    $('#refreshBuckets').click(function () {
+        $('#appBuckets').jstree(true).refresh();
+    });
+
+    $('#createNewBucket').click(function () {
+        createNewBucket();
+    });
+
+    $('#createBucketModal').on('shown.bs.modal', function () {
+        $("#newBucketKey").focus();
+    })
+
+    
 
     $('#hiddenUploadField').change(function () {
 
@@ -75,7 +70,7 @@
         var file = _this.files[0];
 
         //max file chunk size set to 100 KB change as per requirement.
-        /*var maxFileSizeKB = 100;
+        var maxFileSizeKB = 100;
 
         var fileChunks = [];
         var bufferChunkSizeInBytes = maxFileSizeKB * (1024);
@@ -88,11 +83,11 @@
             fileChunks.push(file.slice(currentStreamPosition, endPosition));
             currentStreamPosition = endPosition;
             endPosition = currentStreamPosition + bufferChunkSizeInBytes;
-        }*/
+        }
 
         //Append random number to file name to make it unique
-        // var fileName = Math.random() + "_" + file.name;
-        // uploadFileChunk(fileChunks, fileName, 1, fileChunks.length, node.id);
+        var fileName = Math.random() + "_" + file.name;
+        uploadFileChunk(fileChunks, fileName, 1, fileChunks.length);
 
         switch (node.type) {
             case 'bucket':
@@ -117,6 +112,10 @@
         }
 
     });
+});
+
+
+    
 
 
 // ******************************** CREATE A BUCKET ****************************************

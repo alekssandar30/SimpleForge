@@ -52,41 +52,16 @@
 </head>
 
 <body>
-    <div id="mySidepanel" class="sidepanel">
+    <!--<div id="mySidepanel" class="sidepanel">
         <div>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-
+            
             <div class="sidepanel-section">
-                <div class="form-outline searchInput" style="margin-top: 4rem;">
-                    <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
-                </div>
-                <div id="searchInputs">
-
-                    <div class="form-outline searchInput">
-                        <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
-                    </div>
-
-                </div>
-                <div style="display: flex; flex-direction: row; justify-content: space-between">
-                    <div class="addSearchInput" onclick="addSearchInput()">
-                        <img src="assets/plus-circle.svg" alt="add" />
-                    </div>
-                    <div class="removeSearchInput" onclick="removeSearchInput()">
-                        <img src="assets//minus-circle.svg" alt="remove" />
-                    </div>
-                </div>
-
-                <button type="button" id="searchProperties" class="btn btn-primary" style="position: absolute; top: 390px; right: 5px; width: 97%; padding: 2px;">
-                    Search
-                </button>
-            </div>
-            <!--<div class="sidepanel-section">
                 <div id="linesFromDb">
                 </div>
-            </div>-->
+            </div>
 
         </div>
-    </div>
+    </div>-->
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -99,44 +74,82 @@
                 </li>
 
             </ul>
-            <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 5px;">
-
-                <button class="openbtn" onclick="openNav()">☰ Dashboard</button>
+            <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 15px;">
+                <button class="btn loginBtn" id="autodeskSigninButton">
+                    <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
+                         height="20"> Sign in
+                </button>
+                <button class="btn openbtn" onclick="openNav()">☰ Dashboard</button>
             </div>
         </div>
     </nav>
     <!-- End of navbar -->
     <div class="container">
-        <aside style="padding-top: 1rem; width: 20%;">
+
+        <aside class="leftSidebar">
             <span id="userInfo"></span>
             <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
             <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
-            <!--<button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
+            <button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
                 <span class="glyphicon glyphicon-folder-close"></span> New bucket
-            </button>-->
-            <!--<div id="appBuckets">
+            </button>
+
+            <div id="appBuckets">
                 tree here
-            </div>-->
+            </div>
+            <hr />
+
 
             <div id="userHubs">
-                <div style="padding-top: 100px; text-align: center;">
-                    <button class="btn btn-lg btn-default" id="autodeskSigninButton">
-                        <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
-                             height="20"> Sign in
-                    </button>
-                    <br />
-                    <br />
-                    <br /> You may also need to provision your<br /> BIM 360 Docs account for this app.<br />
-                    <a href="https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps">Learn more</a>.
-                </div>
+                
             </div>
 
+
         </aside>
+
         <div class="resize-handle--x" data-target="aside"></div>
-        <div style="position: relative; width: 85%;">
+
+        <!--Viewer-->
+        <div style="position: relative; width: 70%">
             <div id="forgeViewer"></div>
 
         </div>
+
+        <div class="resize-handle--x" data-target="aside"></div>
+
+        <!--Dashboard-->
+        <aside id="mySidepanel" class="rightSidebar">
+            <div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <br />
+
+                <div class="sidepanel-section">
+                    <div class="form-outline searchInput" style="margin-top: 4rem;">
+                        <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
+                    </div>
+                    <div id="searchInputs">
+
+                        <div class="form-outline searchInput">
+                            <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
+                        </div>
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between">
+                        <div class="addSearchInput" onclick="addSearchInput()">
+                            <img src="assets/plus-circle.svg" alt="add" />
+                        </div>
+                        <div class="removeSearchInput" onclick="removeSearchInput()">
+                            <img src="assets//minus-circle.svg" alt="remove" />
+                        </div>
+                    </div>
+
+                    <button type="button" id="searchProperties" class="btn btn-primary" style="width: 97%; padding: 2px;">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </aside>
+
 
     </div>
     <form id="uploadFile" enctype="multipart/form-data">
@@ -178,7 +191,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Cancel">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title">Thanks for using this sample!</h4>
+                    
                 </div>
                 <div class="modal-body">
                     <p>
@@ -298,19 +311,21 @@
 
         function openNav() {
             document.getElementById("mySidepanel").style.width = "400px";
+            document.getElementById("mySidepanel").style.visibility = "visible";
         }
 
         function closeNav() {
-            document.getElementById("mySidepanel").style.width = "0";
+            document.getElementById("mySidepanel").style.visibility = "hidden"
+            document.getElementById("mySidepanel").style.width = "0px";
         }
 
         function addSearchInput() {
             var cnt = 2;
             var newInput = `
-                                            <div class="form-outline searchInput">
-                                                <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
-                                            </div>
-                                        `;
+                <div class="form-outline searchInput">
+                <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
+                </div>
+            `;
             cnt++;
             $('#searchInputs').append(newInput);
         }
@@ -322,6 +337,8 @@
         }
 
         new Clipboard('.input-group-addon');
+
+
     </script>
 
 

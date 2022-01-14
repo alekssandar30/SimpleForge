@@ -8,8 +8,12 @@ using Autodesk.Forge.Model;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using TestForgeApp.Helpers;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using TestForgeApp.Models;
+using ExcelToEnumerable;
 
-namespace bim360issues.Controllers
+namespace TestForgeApp.Controllers
 {
     public class DataManagementController : ControllerBase
     {
@@ -17,6 +21,13 @@ namespace bim360issues.Controllers
         /// Credentials on this request
         /// </summary>
         private Credentials Credentials { get; set; }
+        private IWebHostEnvironment _hostEnvironment;
+
+
+        public DataManagementController(IWebHostEnvironment environment)
+        {
+            _hostEnvironment = environment;
+        }
 
         /// <summary>
         /// GET TreeNode passing the ID
@@ -50,6 +61,19 @@ namespace bim360issues.Controllers
             }
 
             return nodes;
+        }
+
+        // excel data
+        [HttpGet]
+        [Route("/api/data/excel")]
+        public IActionResult GetDataFromExcel()
+        {
+            string path = Path.Combine(_hostEnvironment.WebRootPath, @"Uploads\ZgLines.xlsx");
+
+            IEnumerable<Line> lines = path.ExcelToEnumerable<Line>();
+
+            return Ok(lines);
+
         }
 
         private async Task<IList<jsTreeNode>> GetHubsAsync()

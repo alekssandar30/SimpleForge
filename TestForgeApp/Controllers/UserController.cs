@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using TestForgeApp.Helpers;
 
-namespace forgeSample.Controllers
+namespace TestForgeApp.Controllers
 {
     public class UserController : ControllerBase
     {

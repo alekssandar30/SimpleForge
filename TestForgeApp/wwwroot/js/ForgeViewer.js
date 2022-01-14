@@ -99,9 +99,21 @@ function onDocumentLoadFailure(viewerErrorCode) {
 
 
 function getForgeToken(callback) {
-    fetch('/api/forge/oauth/token').then(res => {
-        res.json().then(data => {
-            callback(data.access_token, data.expires_in);
-        });
+    fetch('api/forge/oauth2/token').then(res => {
+        if (res === undefined) {
+            fetch('api/forge/oauth3/token').then(res => {
+                res.json().then(data => {
+                    callback(data.access_token, data.expires_in);
+                });
+            });
+        }
+        else {
+            res.json().then(data => {
+                callback(data.access_token, data.expires_in);
+            });
+        }
+        
     });
+
+   
 }
