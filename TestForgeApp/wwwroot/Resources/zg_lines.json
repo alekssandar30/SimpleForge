@@ -1,0 +1,3190 @@
+[
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0001.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0001.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0001.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0003.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0005.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0007.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0008.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0009.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0012.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0012.RB_01A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0012.RB_01B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0012.RB_01C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CPL.S.RL0012.RB_01D",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0002.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0002.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0002.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0006.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0007.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0008.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0013.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0013.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0015.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0015.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0017.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.D.RL0017.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL.0042.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL.0042.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0001.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0003.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0003.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0003.B53_04",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0003.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0003.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_10",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_11",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_13",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_14",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_15",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_17",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0005.B53_18",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0010.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0012.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0012.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0013.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0015.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0015.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0016.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0018.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0018.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0019.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0021.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0021.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0022.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0022.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0024.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0024.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0025.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0025.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0027.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0027.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0028.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0028.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0031.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0033.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0033.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0033.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0036.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0036.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0037.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0038.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0038.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0038.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0038.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0039.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0039.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0040.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0041.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0042.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0042.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0043.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0043.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0043.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0043.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0044.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0044.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0046.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0046.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0048.B53_01",
+    "elementZNR_Pipe_Class": "PE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0048.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0048.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0050.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0050.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0050.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0050.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0050.B53_04",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0050.B53_04",
+    "elementZNR_Pipe_Class": "PE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0050.B53_04",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0053.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0053.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0053.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0055.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0055.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0055.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0056.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0056.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0058.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0058.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0058.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0058.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0059.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0059.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0060.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0060.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0061.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_05",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0063.B53_06",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0067.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0067.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0067.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0068.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0068.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0068.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0068.B53_05",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0068.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0068.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0069.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0069.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0069.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0071.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0071.B53_01",
+    "elementZNR_Pipe_Class": "PE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0071.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0072.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0072.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0072.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0072.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0072.B53_04",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0074.B53_01",
+    "elementZNR_Pipe_Class": "PE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0074.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0074.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0076.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0076.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0076.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0077.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0077.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0077.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0078.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0078.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0078.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0078.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0079.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0079.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0080.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0080.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0081.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0081.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_01A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_01B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_01C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_01D",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_02A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_02B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_02C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0082.RB_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0090.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0091.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0093.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0093.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0094.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0094.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0094.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0095.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0096.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0098.RB_01A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0098.RB_01B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0098.RB_01C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0114.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0114.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0116.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0116.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0116.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0118.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0118.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0118.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0119.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL0119.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL049.B53_01",
+    "elementZNR_Pipe_Class": "PE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.R.RL049.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0001.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0001.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0001.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0001.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_10",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_12",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_13",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_15",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_16",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_17",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_18",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_19",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_20",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_21",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_22",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_23",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_24",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_25",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_26",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0002.B53_27",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0004.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0004.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0006.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0007.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0007.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0008.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0009.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0009.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0013.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0013.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0013.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0013.B53_07",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0013.B53_10",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_09",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_10",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_11",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_12",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_14",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_15",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014.B53_15",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0014_B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0019.B53_04",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0019.B53_04",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0022.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0022.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0024.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0024.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0025.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0026.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0029.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0029.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0029.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0032.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0033.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0036.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0036.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0037.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0037.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0037.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0039.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0040.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0043.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0043.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0044.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0044.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0044.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0045.B53_03",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0045.B53_04",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0045.B53_04",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0047.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0047.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0048.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0051.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0051.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0052.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0052.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0054.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0054.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0055.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0058.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0058.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0059.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0059.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0059.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0061.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0061.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0062.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0062.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0065.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0065.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0066.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0066.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0067.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0067.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0073.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0073.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0073.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0074.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0074.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0076.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0077.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0080.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0080.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0081.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0081.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0081.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0085.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0086.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0086.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0086.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0087.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0088.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0089.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0089.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0090.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0091.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0092.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0093.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0094.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0094.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0094.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0094.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0095.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0096.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0096.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0097.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0098.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0098.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0099.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0099.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0100.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0101.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0101.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0102.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0103.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0103.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0104.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0104.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0105.RB_01A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0105.RB_01B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0105.RB_01C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0106.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0106.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0108.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0109.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0110.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0110.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0110.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0110.B53_03",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0110.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0114.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0114.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0114.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0115.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0116.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0116.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0117.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0118.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0118.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0119.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0119.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0120.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0120.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0121.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0121.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0123.B53_01",
+    "elementZNR_Pipe_Class": "PE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0123.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0124.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0124.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0124.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0126.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0126.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0126.B53_01",
+    "elementZNR_Pipe_Class": "PE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0127.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0127.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0128.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0131.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0131.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0131.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0137.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0137.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0138.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0138.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0140.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0140.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0140.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0140.B53_02",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0140.B53_03",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0140.B53_03",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0141.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0141.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0141.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0143.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0143.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0143.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0144.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0145.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0148.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0148.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0148.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0150.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0150.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0150.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0152.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0152.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0152.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0152.B53_03",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0155.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0156.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0156.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0156.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0159.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0159.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0161.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0162.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0162.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0163.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0164.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0164.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0165.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0166.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0166.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0168.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0168.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0168.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0168.B53_07",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0168.B53_09",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0170.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0171.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0171.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0172.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0172.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0172.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0173.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0173.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0173.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0173.B53_08",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0173.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0174.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0175.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_02",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_03",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_03",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_04",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0177.B53_04",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0178.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0178.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0178.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0180.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0180.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0180.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0182.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0182.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0183.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0183.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0186.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0186.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0186.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0188.B53_0",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0188.B53_0",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0188.B53_0",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0191.B54_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0191.B54_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0191.B54_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0192.B54_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0192.B54_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0192.B54_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0193.B54_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0193.B54_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0193.B54_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0194.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0194.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0195.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0195.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0195.B53_02",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0198.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0198.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0198.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0200.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0200.B53_01",
+    "elementZNR_Pipe_Class": "PE-HD"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0200.B53_01",
+    "elementZNR_Pipe_Class": "HDPE"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0201.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0201.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0201.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0204.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0205.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0205.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0205.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0208.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0209.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0209.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0210.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0211.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0211.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0212.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0212.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0213.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0213.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0214.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0215.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0217.B54_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0217.B54_03",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0218.B54_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0218.B54_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0218.B54_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0218.B54_04",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0218.B54_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0218.B54_05",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0218.B54_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0219.B54_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0220.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0220.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0221.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0221.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0221.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_01A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_01B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_01C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_01C",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_02A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_02B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_02C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0230.RB_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0246.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0246.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0248.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0248.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0249.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0250.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0250.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0251.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0252.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0253.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0254.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0254.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0255.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0255.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0255.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0255.B53_02",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0255.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0256.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0256.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0258.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0259.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0259.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0259.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0260.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0261.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0261.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0299.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0299.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CRT.S.RL0299.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWL.D.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.D.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0001.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0001.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0002.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0002.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0002.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0003.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0003.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0003.B53_08",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0003.B53_11",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0003.B53_12",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0004.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_02A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_02B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_02C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_03A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_03B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_04A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_04B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0005.RB_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0007.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0007.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0007.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0008.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0008.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0009.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0010.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0011.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0011.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0011.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0012.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0012.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0012.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0013.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0013.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0014.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0014.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0014.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0015.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0015.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0016.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0016.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0017.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0017.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0017.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0018.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0019.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0019.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0019.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0019.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0023.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0025.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0025.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0025.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0026.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0026.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0028.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0028.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0028.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0029.B54_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0029.B54_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0029.B54_02",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0029.B54_02",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0029.B54_04",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0029.B54_04",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0030.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0030.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0036.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0046.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.R.RL0047.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0001.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0001.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0003.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0004.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0004.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0004.B53_11",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0004.B53_12",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0004.B53_12",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0004.B53_12",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_01A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_01B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_02B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_03A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_03B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_03C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_07A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0005.RB_07B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0027.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0027.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0029.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0029.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0031.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0031.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0033.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0033.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0034.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0034.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0034.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0034.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0035.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0036.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0037.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0037.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0037.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0037.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0038.B54_03",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0038.B54_03",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0038.B54_04",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWL.S.RL0038.B54_04",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.D.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.D.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "MAP"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0001.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0001.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0001.B53_06",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0001.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0001.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0002.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0002.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0002.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0003.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0003.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0003.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0005.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0005.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0005.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0005.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0005.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0007.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0008.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0008.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0008.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0009.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0010.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0010.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0011.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0012.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0012.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0013.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0013.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0013.B53_09",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0013.B53_09",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0013.B53_10",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0013.B53_10",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0014.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0014.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0016.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0017.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0018.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0018.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0018.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0019.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0019.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0019.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0022.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0022.B53_05",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0022.B53_07",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0022.B53_08",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0023.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0024.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0024.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0024.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0026.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0027.B54_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0027.B54_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0035.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0036.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_02A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_02B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_02C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_02D",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_02E",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_04A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0037.RB_04B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.R.RL0040.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0001.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0001.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0001.B53_05",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0001.B53_05",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0001.B53_06",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0001.B53_06",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0002.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0002.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0005.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0005.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0006.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0006.B53_01",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0006.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0006.B53_02",
+    "elementZNR_Pipe_Class": "1.4401"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0006.B53_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0006.B53_04",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0007.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0007.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0010.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0011.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0012.B53_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0012.B53_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0012.B53_02",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0012.B53_02",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0013.B54_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0013.B54_01",
+    "elementZNR_Pipe_Class": null
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_02A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_02B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_02C",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_02D",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_02E",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_03",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_04A",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0014.RB_04B",
+    "elementZNR_Pipe_Class": "CS"
+  },
+  {
+    "elementZNR_Line_Number": "CWM.S.RL0016.RB_01",
+    "elementZNR_Pipe_Class": "CS"
+  }
+]

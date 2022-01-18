@@ -350,17 +350,17 @@
         const tableBody = document.querySelector("#lines");
 
         function loadPipes() {
-            const request = new XMLHttpRequest();
+            //const request = new XMLHttpRequest();
 
-            request.open("get", "/api/data/excel");
+            //request.open("get", "/api/data/excel");
 
-            request.onload = () => {
-              try {
-                    const data = JSON.parse(request.responseText);
-                    // clear table
-                    //while (tableBody.firstChild) {
-                    //    tableBody.removeChild(tableBody.firstChild);
-                    //}
+            $.getJSON('./Resources/zg_lines.json', function (data) {
+                console.log(data);
+
+                try {
+                    //console.log(request.responseText);
+                    //const data = JSON.parse(request.responseText);
+                    
 
                     // populate table
                     data.forEach((row) => {
@@ -369,13 +369,12 @@
                         tr.className = "zg_line";
 
                         tr.addEventListener("click", () => {
-                            console.log(row);
                             const searchStr = row.elementZNR_Line_Number
                             // treba mi viewer da uradim pretragu po row.elementZNR_Line_Number i da izolujem tu cev
                             viewer.search(searchStr, (dbIds) => {
                                 viewer.isolate(dbIds);
                                 viewer.select(dbIds);
-                                
+
                             });
                         })
 
@@ -392,9 +391,13 @@
                 catch (e) {
                     console.warn(e);
                 }
-            }
+            });
 
-            request.send();
+            //request.onload = () => {
+                
+            //}
+
+            //request.send();
         }
 
 
