@@ -7,11 +7,8 @@ namespace TestForgeApp.Models
 {
     public class Line
     {
-        public int ID { get; set; }
-        public int LineNumber { get; set; }
-        public double Height { get; set; }
-        public double Width { get; set; }
-        public int Price { get; set; }
+        public string ElementZNR_Line_Number { get; set; }
+        public string ElementZNR_Pipe_Class { get; set; }
 
     }
 }
