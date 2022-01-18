@@ -41,8 +41,8 @@
     <script src="js/ForgeThree.js"></script>
     <script src="js/ForgeViewer.js"></script>
     <script src="js/SearchProps.js"></script>
-    <!--<script src="js/SlideResizer.js"></script>-->
-    <!--<script src="js/ExcelTable.js"></script>  TODO: implement this later -->
+    <!--<script src="js/SlideResizer.js"></script>-->    
+
     <!-- 2D Viewer extension (NestedViewer) -->
     <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/NestedViewerExtension/contents/main.css">
     <script src="//cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/NestedViewerExtension/contents/main.js"></script>-->
@@ -84,7 +84,7 @@
     </nav>
     <!-- End of navbar -->
 
-    <div data-role="splitter" style="height: 100%; width: 100%;">
+    <div data-role="splitter" style="height: 100vh; width: 100vw;">
         <div class="leftWrapper">
             <span id="userInfo"></span>
             <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
@@ -105,42 +105,61 @@
 
         </div>
         <div class="viewerContainer">
-                <div id="forgeViewer" style="width: 100%"></div>
+            <div id="forgeViewer"></div>
         </div>
-            
+
         <div class="rightWrapper">
             <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <br />-->
 
             <div class="sidepanel-section">
-                <div class="form-outline searchInput" style="margin-top: 4rem;">
-                    <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
-                </div>
-                <div id="searchInputs">
+                <div>
+                    <div class="form-outline searchInput" style="margin-top: 4rem;">
+                        <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
+                    </div>
+                    <div id="searchInputs">
 
-                    <div class="form-outline searchInput">
-                        <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
+                        <div class="form-outline searchInput">
+                            <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
+                        </div>
+
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between">
+                        <div class="addSearchInput" onclick="addSearchInput()">
+                            <img src="assets/plus-circle.svg" alt="add" />
+                        </div>
+                        <div class="removeSearchInput" onclick="removeSearchInput()">
+                            <img src="assets//minus-circle.svg" alt="remove" />
+                        </div>
                     </div>
 
+                    <button type="button" id="searchProperties" class="btn btn-primary" style="width: 97%; padding: 2px;">
+                        Search
+                    </button>
                 </div>
-                <div style="display: flex; flex-direction: row; justify-content: space-between">
-                    <div class="addSearchInput" onclick="addSearchInput()">
-                        <img src="assets/plus-circle.svg" alt="add" />
-                    </div>
-                    <div class="removeSearchInput" onclick="removeSearchInput()">
-                        <img src="assets//minus-circle.svg" alt="remove" />
-                    </div>
-                </div>
+                <hr />
 
-                <button type="button" id="searchProperties" class="btn btn-primary" style="width: 97%; padding: 2px;">
-                    Search
-                </button>
+                <!--Excel data-->
+                <div id="linesFromDb">
+                    <h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Lines from excel:</h5>
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th>Line number</th>
+                                <th>Pipe Class</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="lines">
+                        </tbody>
+                    </table>
+                </div>
             </div>
-                   
+
         </div>
     </div>
 
-      
+
     <form id="uploadFile" enctype="multipart/form-data">
         <input id="hiddenUploadField" type="file" name="theFile" style="visibility:hidden" />
     </form>
@@ -311,10 +330,10 @@
         function addSearchInput() {
             var cnt = 2;
             var newInput = `
-                    <div class="form-outline searchInput">
-                    <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
-                    </div>
-                `;
+                        <div class="form-outline searchInput">
+                        <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
+                        </div>
+                    `;
             cnt++;
             $('#searchInputs').append(newInput);
         }
@@ -327,6 +346,59 @@
 
         new Clipboard('.input-group-addon');
 
+        // script for data from excel
+        const tableBody = document.querySelector("#lines");
+
+        function loadPipes() {
+            const request = new XMLHttpRequest();
+
+            request.open("get", "/api/data/excel");
+
+            request.onload = () => {
+              try {
+                    const data = JSON.parse(request.responseText);
+                    // clear table
+                    //while (tableBody.firstChild) {
+                    //    tableBody.removeChild(tableBody.firstChild);
+                    //}
+
+                    // populate table
+                    data.forEach((row) => {
+
+                        const tr = document.createElement("tr");
+                        tr.className = "zg_line";
+
+                        tr.addEventListener("click", () => {
+                            console.log(row);
+                            const searchStr = row.elementZNR_Line_Number
+                            // treba mi viewer da uradim pretragu po row.elementZNR_Line_Number i da izolujem tu cev
+                            viewer.search(searchStr, (dbIds) => {
+                                viewer.isolate(dbIds);
+                                viewer.select(dbIds);
+                                
+                            });
+                        })
+
+                        Object.values(row).forEach((cell) => {
+                            const td = document.createElement("td");
+                            td.textContent = cell;
+                            tr.appendChild(td)
+                        });
+
+                        tableBody.appendChild(tr);
+                    });
+
+                }
+                catch (e) {
+                    console.warn(e);
+                }
+            }
+
+            request.send();
+        }
+
+
+        loadPipes();
 
     </script>
 
