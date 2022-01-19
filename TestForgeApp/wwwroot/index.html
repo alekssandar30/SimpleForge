@@ -365,6 +365,12 @@
                                 viewer.isolate(dbIds);
                                 viewer.select(dbIds);
 
+                                //focus on target object
+                                viewer.getAggregateSelection((data) => {
+                                    let rootId = data.selector.getInstanceTree().nodeAccess.rootId
+                                    viewer.fitToView(rootId, viewer.model)
+                                })
+
                             });
                         })
 
