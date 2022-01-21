@@ -79,7 +79,7 @@
     <!-- End of navbar -->
 
     <div data-role="splitter" style="height: 90vh; width: 100vw;">
-        <div class="leftWrapper">
+        <div class="leftWrapper" style="padding: 1rem; position: relative;">
             
             <div style="display: flex; flex-direction: row; width: 100%; gap: 1rem;">
                 <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
@@ -103,7 +103,7 @@
             <div id="forgeViewer"></div>
         </div>
 
-        <div class="rightWrapper">
+        <div class="rightWrapper" style="padding: 1rem; position: relative;">
             <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <br />-->
 
@@ -137,7 +137,7 @@
                 <!--Excel data-->
                 <div id="linesFromDb">
                     <h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Lines from excel:</h5>
-                    <table style="width: 100%;">
+                    <table style="width: 100%; height: 15rem">
                         <thead>
                             <tr>
                                 <th>Line number</th>
@@ -149,6 +149,7 @@
                         </tbody>
                     </table>
                 </div>
+
             </div>
 
         </div>

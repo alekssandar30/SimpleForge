@@ -73,7 +73,11 @@ $(document).ready(function () {
 
                     viewer.isolate(dbIdsToSelect);
                     viewer.select(dbIdsToSelect);
-
+                    viewer.fitToView(dbIdsToSelect, viewer.model);
+                    // viewer.getAggregateSelection((data) => {
+                    //     let rootId = data.selector.getInstanceTree().nodeAccess.rootId
+                    //     viewer.fitToView(rootId, viewer.model)
+                    // })
                     
                     // zoomIn();
                 }, (e) => {
@@ -81,10 +85,7 @@ $(document).ready(function () {
                     console.log(e);
                 }, categoryArray);
 
-                viewer.getAggregateSelection((data) => {
-                    let rootId = data.selector.getInstanceTree().nodeAccess.rootId
-                    viewer.fitToView(rootId, viewer.model)
-                })
+                
             });
         }
 

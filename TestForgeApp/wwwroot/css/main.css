@@ -57,6 +57,7 @@ body {
 
 .leftWrapper {
     display: flex;
+    padding: 1rem;
     padding-top: 2rem;
     flex-direction: column;
     justify-content: center;
@@ -67,6 +68,7 @@ body {
 
 .rightWrapper {
     display: flex;
+    padding: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
