@@ -66,8 +66,8 @@
 
             </ul>
             <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 15px;">
-                <span id="userInfo"></span>
-                <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
+                <span id="userInfo" style="margin-top: 5px"></span>
+                <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:10px;cursor: pointer; float: right; display: none" title="Sign out">Sign out</span>
                 <button class="btn btn-default loginBtn" id="autodeskSigninButton">
                     <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
                          height="20"> Sign in
@@ -81,12 +81,13 @@
     <div data-role="splitter" style="height: 90vh; width: 100vw;">
         <div class="leftWrapper">
             
-            <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
-            
-            <button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
-                <span class="glyphicon glyphicon-folder-close"></span> New bucket
-            </button>
-
+            <div style="display: flex; flex-direction: row; width: 100%;">
+                <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
+                
+                <button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
+                    <span class="glyphicon glyphicon-folder-close"></span> New bucket
+                </button>
+             </div>
             <div id="appBuckets">
                 tree here
             </div>
