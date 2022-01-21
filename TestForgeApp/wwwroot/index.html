@@ -10,8 +10,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
     <!--Chart JS  packages-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -51,7 +53,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <ul class="nav navbar-nav left">
@@ -64,6 +66,8 @@
 
             </ul>
             <div class="input-group" style="position: absolute; right: 10px; top: 15px; display: flex; flex-direction: row; gap: 15px;">
+                <span id="userInfo"></span>
+                <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
                 <button class="btn btn-default loginBtn" id="autodeskSigninButton">
                     <img src="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/autodesk_text.png"
                          height="20"> Sign in
@@ -76,9 +80,9 @@
 
     <div data-role="splitter" style="height: 90vh; width: 100vw;">
         <div class="leftWrapper">
-            <span id="userInfo"></span>
+            
             <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
-            <span id="signOut" class="glyphicon glyphicon-log-out" style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
+            
             <button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
                 <span class="glyphicon glyphicon-folder-close"></span> New bucket
             </button>
@@ -320,10 +324,10 @@
         function addSearchInput() {
             var cnt = 2;
             var newInput = `
-                        <div class="form-outline searchInput">
-                        <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
-                        </div>
-                    `;
+                            <div class="form-outline searchInput">
+                            <input type="search" id="searchInput${cnt}" placeholder="Search properties values" class="form-control" />
+                            </div>
+                        `;
             cnt++;
             $('#searchInputs').append(newInput);
         }
@@ -350,7 +354,7 @@
                 try {
                     //console.log(request.responseText);
                     //const data = JSON.parse(request.responseText);
-                    
+
 
                     // populate table
                     data.forEach((row) => {
@@ -371,6 +375,10 @@
                                     viewer.fitToView(rootId, viewer.model)
                                 })
 
+                                if (dbIds.length === 0) {
+                                    toastr.error('Sorry, pipe with that line number is not found in the model.', 'Not Found');
+                                }
+
                             });
                         })
 
@@ -390,7 +398,7 @@
             });
 
             //request.onload = () => {
-                
+
             //}
 
             //request.send();

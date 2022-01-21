@@ -20,7 +20,12 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:3000",
+                "FORGE_CALLBACK_URL": "http://localhost:3000/api/forge/callback/oauth",
+                "FORGE_CLIENT_ID": "tpC1eigZ1hG7bD1KHxNIcpwB95CjMMC5",
+                "FORGE_CLIENT_SECRET": "lvooTENKPq3raWrp"
+                
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
@@ -30,6 +35,8 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
-        }
-    ]
+        },
+        
+    ],
+    
 }

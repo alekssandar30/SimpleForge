@@ -47,6 +47,7 @@ $(document).ready(function () {
 
                         viewer.isolate(dbIdsToSelect);
                         viewer.select(dbIdsToSelect);
+
                     }, (e) => {
                         // error, handle here...
                         console.log(e);
@@ -72,14 +73,29 @@ $(document).ready(function () {
 
                     viewer.isolate(dbIdsToSelect);
                     viewer.select(dbIdsToSelect);
+
+                    
+                    // zoomIn();
                 }, (e) => {
                     // error, handle here...
                     console.log(e);
                 }, categoryArray);
+
+                viewer.getAggregateSelection((data) => {
+                    let rootId = data.selector.getInstanceTree().nodeAccess.rootId
+                    viewer.fitToView(rootId, viewer.model)
+                })
             });
         }
 
         // ***************************************** HELPER FUNCTIONS ********************************************
+
+        function zoomIn() {
+            viewer.getAggregateSelection((data) => {
+                let rootId = data.selector.getInstanceTree().nodeAccess.rootId
+                viewer.fitToView(rootId, viewer.model)
+            })
+        }
 
         function isTwoWordsCategory(category) {
             const words = category.split(' ');

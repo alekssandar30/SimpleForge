@@ -25,18 +25,18 @@ body {
 }
 
 .viewerContainer {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     position: relative;
     width: 100% !important;
+    height: 100%;
 }
 
 #forgeViewer {
-    
+    position: absolute;
     width: 100% !important;
     height: 100%;
-    margin: 0;
 }
 
 #userHubs {
@@ -55,46 +55,13 @@ body {
     box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
 }
 
-.container {
-    width: 100% !important;
-    height: 100% !important;
-
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    padding: 10px;
-}
-
-
-.container > aside {
-    -ms-flex-order: 0;
-    order: 0;
-    align-self: auto;
-    height: 100%;
-}
-
-.container > main {
-    height: 100%;
-    -ms-flex-order: 0;
-    order: 0;
-    align-self: auto;
-}
-
-.container > aside,
-.container > main {
-    padding-right: 10px;
-    overflow: auto;
-}
-
 .leftWrapper {
     display: flex;
     padding-top: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 20rem;
+    width: 4rem !important;
     background-color: #F8F8F8;
 }
 
@@ -103,71 +70,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 20rem;
+    width: 4rem !important;
     background-color: #F8F8F8;
 }
-
-.leftSidebar {
-    width: 20%;
-    padding-top: 1rem;
-}
-
-.rightSidebar {
-    width: 20%;
-}
-
-.resize-handle--x {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    position: relative;
-    box-sizing: border-box;
-    width: 3px;
-    height: 100%;
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: black;
-    border-right-width: 1px;
-    border-right-style: solid;
-    border-right-color: black;
-    cursor: ew-resize;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.resize-handle--x:before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    right: 100%;
-    height: 18px;
-    width: 2px;
-    margin-top: -9px;
-    border-left-color: black;
-    border-left-width: 1px;
-    border-left-style: solid;
-}
-
-.resize-handle--x:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 100%;
-    height: 18px;
-    width: 2px;
-    margin-top: -9px;
-    border-right-color: black;
-    border-right-width: 1px;
-    border-right-style: solid;
-}
-
 
 #rpanrResize {
     flex-grow: 0;
@@ -253,4 +158,8 @@ body {
     cursor: pointer;
     background-color: honeydew;
     box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 15px;
+}
+
+.toast {
+    opacity: 1 !important;
 }

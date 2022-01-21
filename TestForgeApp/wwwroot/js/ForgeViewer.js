@@ -24,7 +24,7 @@ function launchViewer(urn) {
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
                 'Autodesk.VisualClusters',
-                'Autodesk.ADN.Viewing.Extension.Chart',
+                //'Autodesk.ADN.Viewing.Extension.Chart',
                 //'Autodesk.Forge.Samples.VersionChanges',
                 //'LabelsExtension',
             ],
@@ -35,7 +35,7 @@ function launchViewer(urn) {
 
         viewer = new Autodesk.Viewing.GuiViewer3D(htmlDiv, config3d);
  
-        viewer.setTheme("light-theme");
+        //viewer.setTheme("light-theme");
         //const profileSettings = Autodesk.Viewing.ProfileSettings.Navis;
         //const profile = new Autodesk.Viewing.Profile(profileSettings);
         //viewer.setProfile(profile);
