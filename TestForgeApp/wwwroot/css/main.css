@@ -25,18 +25,17 @@ body {
 }
 
 .viewerContainer {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     position: relative;
-    width: 100% !important;
+    overflow: hidden;
     height: 100%;
+    width: 100%;
 }
 
 #forgeViewer {
     position: absolute;
-    width: 100% !important;
+    overflow: hidden;
     height: 100%;
+    width: 100%;
 }
 
 #userHubs {

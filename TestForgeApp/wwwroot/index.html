@@ -78,7 +78,7 @@
     </nav>
     <!-- End of navbar -->
 
-    <div data-role="splitter" style="height: 90vh; width: 100vw;">
+    <div data-role="splitter" style="height: 90vh; width: 100vw;" id="splitter" data-on-change="splitterChange">
         <div class="leftWrapper" style="padding: 1rem; position: relative;">
             
             <div style="display: flex; flex-direction: row; width: 100%; gap: 1rem;">
@@ -398,16 +398,18 @@
                     console.warn(e);
                 }
             });
-
-            //request.onload = () => {
-
-            //}
-
-            //request.send();
         }
 
 
         loadPipes();
+
+        // resize viewer
+
+        document.getElementById("splitter").addEventListener("click", function(e){
+            console.log(e.detail);
+            viewer.resize();
+    })
+
 
     </script>
 
