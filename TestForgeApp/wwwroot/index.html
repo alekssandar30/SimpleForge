@@ -10,16 +10,16 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
     <!--Chart JS  packages-->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" /> -->
     <!--<script src="https://unpkg.com/jspdf/dist/jspdf.min.js"></script>-->
-    <script src="js/async.min.js"></script>
+    <!-- <script src="js/async.min.js"></script> -->
 
     <!-- The Viewer CSS -->
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
@@ -32,13 +32,13 @@
     <!-- this project files -->
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/SidePanel.css" rel="stylesheet" />
-    <link href="css/Dashboard.css" rel="stylesheet" />
+    <!-- <link href="css/Dashboard.css" rel="stylesheet" /> -->
 
     <!--Dashboard js-->
-    <script src="js/Dashboard/Dashboard.js"></script>
+    <!-- <script src="js/Dashboard/Dashboard.js"></script>
     <script src="js/Dashboard/DashboardPanel.js"></script>
     <script src="js/Dashboard/PanelBarChart.js"></script>
-    <script src="js/Dashboard/PanelPieChart.js"></script>
+    <script src="js/Dashboard/PanelPieChart.js"></script> -->
 
     <script src="js/ForgeThree.js"></script>
     <script src="js/ForgeViewer.js"></script>
@@ -61,7 +61,7 @@
                     <a href="https://www.zaunergroup.com/en/" target="_blank">
                         <img alt="Zauner logo" src="./assets/ZaunerLogo.PNG" height="40" width="150">
                     </a>
-                    <h3>ZG Management</h3>
+                    <h3>Zauner Forge</h3>
                 </li>
 
             </ul>
@@ -99,7 +99,7 @@
             </div>
 
         </div>
-        <div class="viewerContainer">
+        <div class="viewerContainer" style="width: 70%">
             <div id="forgeViewer"></div>
         </div>
 
@@ -303,13 +303,14 @@
     </div>
 
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
     <!--<script src="https://petrbroz.github.io/forge-viewer-utils/master/Utilities.js"></script>-->
     <!--<script src="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/CustomPropertiesExtension/contents/main.js"></script>-->
     <!--Extensions-->
     <script src="js/extensions/ToolbarExtension.js"></script>
-    <script src="js/extensions/labelsExtension.js"></script>
+    <!-- <script src="js/extensions/labelsExtension.js"></script> -->
     <script src="js/extensions/VersionChangeExtension.js"></script>
-    <script src="js/extensions/ChartExtension.js"></script>
+    <!-- <script src="js/extensions/ChartExtension.js"></script> -->
 
     <script>
 
@@ -351,7 +352,6 @@
             //request.open("get", "/api/data/excel");
 
             $.getJSON('./Resources/zg_lines.json', function (data) {
-                console.log(data);
 
                 try {
                     //console.log(request.responseText);
@@ -364,7 +364,10 @@
                         const tr = document.createElement("tr");
                         tr.className = "zg_line";
 
-                        tr.addEventListener("click", () => {
+                        tr.addEventListener('click', search, false);
+                        tr.addEventListener('touchstart', search, false);
+
+                        function search() {
                             const searchStr = row.elementZNR_Line_Number
                             // treba mi viewer da uradim pretragu po row.elementZNR_Line_Number i da izolujem tu cev
                             viewer.search(searchStr, (dbIds) => {
@@ -381,8 +384,10 @@
                                     toastr.error('Sorry, pipe with that line number is not found in the model.', 'Not Found');
                                 }
 
+                                tr.removeEventListener('click', search);
+                                tr.removeEventListener('touchstart', search);
                             });
-                        })
+                        }
 
                         Object.values(row).forEach((cell) => {
                             const td = document.createElement("td");
@@ -406,7 +411,6 @@
         // resize viewer
 
         document.getElementById("splitter").addEventListener("click", function(e){
-            console.log(e.detail);
             viewer.resize();
     })
 
