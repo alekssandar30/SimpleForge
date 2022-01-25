@@ -14,8 +14,9 @@ body {
 #appBuckets {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90% !important;
     height: 20%;
+    overflow-x: auto;
     margin-top: 2rem;
 }
 
@@ -42,8 +43,8 @@ body {
 
 #userHubs {
     overflow: auto;
-    width: 100%;
-    height: calc(100vh - 150px);
+    width: 90% !important;
+    height: 40%;
 }
 
 
@@ -61,7 +62,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 90vh;
+    height: 90vh !important;
     padding-top: 1rem;
     flex-grow: 4; 
 }
@@ -69,16 +70,19 @@ body {
 #one {
     min-width: 0;
     border-right: 1px solid gray;
+    height: 100%;
 }
 
 #two {
     width: 90%;
+    height: 100%;
     border-right: 1px solid gray;
     border-left: 1px solid gray;
 }
 
 #three {
     min-width: 0;
+    height: 100%;
     border-left: 1px solid gray;
 }
 
@@ -87,9 +91,8 @@ body {
     padding: 1rem;
     padding-top: 2rem;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
+    width: 100%;
+    height: 100%;
     background-color: #F8F8F8;
 }
 

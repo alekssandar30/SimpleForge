@@ -69,7 +69,6 @@ function onDocumentLoadSuccess(doc) {
         //viewer.loadExtension("NestedViewerExtension", { filter: ["2d"], crossSelection: true })
         // viewer.loadExtension('Autodesk.VisualClusters', { attribName: 'Material', searchAncestors: true });
         viewer.loadExtension('Autodesk.VisualClusters');
-
         // viewer.getExtension('Autodesk.VisualClusters').reset();
 
     });
