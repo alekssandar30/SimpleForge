@@ -4,17 +4,21 @@
 <head>
     <title>View Models - Autodesk Forge</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="https://github.com/Autodesk-Forge/learn.forge.viewmodels/raw/master/img/favicon.ico">
     <!-- Common packages: jQuery, Bootstrap, jsTree -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.3.5/split.min.js"></script>
+
     
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script> -->
+    
+    <!-- <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css"> -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <!--Chart JS  packages-->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script> -->
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" /> -->
@@ -78,80 +82,84 @@
     </nav>
     <!-- End of navbar -->
 
-    <div data-role="splitter" style="height: 90vh; width: 100vw;" id="splitter" data-on-change="splitterChange">
-        <div class="leftWrapper" style="padding: 1rem; position: relative;">
+
+    <div class="wrapper" id="wrapper">
+        <div id="one">
+            <div class="leftWrapper">
             
-            <div style="display: flex; flex-direction: row; width: 100%; gap: 1rem;">
-                <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
-                
-                <button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
-                    <span class="glyphicon glyphicon-folder-close"></span> New bucket
-                </button>
-             </div>
-            <div id="appBuckets">
-                tree here
-            </div>
-            <hr />
-
-
-            <div id="userHubs">
-
-            </div>
-
-        </div>
-        <div class="viewerContainer" style="width: 70%">
-            <div id="forgeViewer"></div>
-        </div>
-
-        <div class="rightWrapper" style="padding: 1rem; position: relative;">
-            <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <br />-->
-
-            <div class="sidepanel-section">
-                <div>
-                    <div class="form-outline searchInput" style="margin-top: 4rem;">
-                        <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
-                    </div>
-                    <div id="searchInputs">
-
-                        <div class="form-outline searchInput">
-                            <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
-                        </div>
-
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content: space-between">
-                        <div class="addSearchInput" onclick="addSearchInput()">
-                            <img src="assets/plus-circle.svg" alt="add" />
-                        </div>
-                        <div class="removeSearchInput" onclick="removeSearchInput()">
-                            <img src="assets//minus-circle.svg" alt="remove" />
-                        </div>
-                    </div>
-
-                    <button type="button" id="searchProperties" class="btn btn-primary" style="width: 97%; padding: 2px;">
-                        Search
+                <div style="display: flex; flex-direction: row; width: 100%; gap: 1rem;">
+                    <span id="refreshHubs" class="glyphicon glyphicon-refresh" style="cursor: pointer; display: none" title="Refresh list of files"></span>
+                    
+                    <button class="btn btn-xs btn-info" style="float: right" id="showFormCreateBucket" data-toggle="modal" data-target="#createBucketModal">
+                        <span class="glyphicon glyphicon-folder-close"></span> New bucket
                     </button>
+                 </div>
+                <div id="appBuckets">
+                    tree here
                 </div>
                 <hr />
-
-                <!--Excel data-->
-                <div id="linesFromDb">
-                    <h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Lines from excel:</h5>
-                    <table style="width: 100%; height: 15rem">
-                        <thead>
-                            <tr>
-                                <th>Line number</th>
-                                <th>Pipe Class</th>
-
-                            </tr>
-                        </thead>
-                        <tbody id="lines">
-                        </tbody>
-                    </table>
+    
+    
+                <div id="userHubs">
+    
                 </div>
-
+    
             </div>
+        </div>
+        <div id="two">
+            <div class="viewerContainer">
+                <div id="forgeViewer" style="width: 100%"></div>
+            </div>
+        </div>
+        <div id="three">
+            <div class="rightWrapper" style="padding: 1rem; position: relative;">
+    
 
+                <div class="sidepanel-section">
+                    <div>
+                        <div class="form-outline searchInput" style="margin-top: 4rem;">
+                            <input type="search" id="searchCategoryInput" placeholder="Category" class="form-control" />
+                        </div>
+                        <div id="searchInputs">
+    
+                            <div class="form-outline searchInput">
+                                <input type="search" id="searchInput" placeholder="Search properties values" class="form-control" />
+                            </div>
+    
+                        </div>
+                        <div style="display: flex; flex-direction: row; justify-content: space-between">
+                            <div class="addSearchInput" onclick="addSearchInput()">
+                                <img src="assets/plus-circle.svg" alt="add" />
+                            </div>
+                            <div class="removeSearchInput" onclick="removeSearchInput()">
+                                <img src="assets//minus-circle.svg" alt="remove" />
+                            </div>
+                        </div>
+    
+                        <button type="button" id="searchProperties" class="btn btn-primary" style="width: 97%; padding: 2px;">
+                            Search
+                        </button>
+                    </div>
+                    <hr />
+    
+                    <div id="linesFromDb">
+                        <h5 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Lines from excel:</h5>
+                        <table style="width: 100%; height: 15rem">
+                            <thead>
+                                <tr>
+                                    <th>Line number</th>
+                                    <th>Pipe Class</th>
+    
+                                </tr>
+                            </thead>
+                            <tbody id="lines">
+                            </tbody>
+                        </table>
+                    </div>
+    
+                </div>
+    
+            </div>
         </div>
     </div>
 
@@ -302,7 +310,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <!-- <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
     <!--<script src="https://petrbroz.github.io/forge-viewer-utils/master/Utilities.js"></script>-->
     <!--<script src="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/CustomPropertiesExtension/contents/main.js"></script>-->
@@ -311,8 +319,21 @@
     <!-- <script src="js/extensions/labelsExtension.js"></script> -->
     <script src="js/extensions/VersionChangeExtension.js"></script>
     <!-- <script src="js/extensions/ChartExtension.js"></script> -->
+    
 
     <script>
+
+        var splitobj = Split(["#one","#two","#three"], {
+            elementStyle: function (dimension, size, gutterSize) { 
+                $(window).trigger('resize'); // Optional
+                return {'flex-basis': 'calc(' + size + '% - ' + gutterSize + 'px)'}
+            },
+            gutterStyle: function (dimension, gutterSize) { return {'flex-basis':  gutterSize + 'px'} },
+            sizes: [20,60,20],
+            minSize: 150,
+            gutterSize: 6,
+            cursor: 'col-resize'
+        });
 
         function openNav() {
             document.getElementById("mySidepanel").style.width = "400px";
@@ -341,7 +362,7 @@
             searchInputs.children[searchInputs.children.length - 1].remove();
         }
 
-        new Clipboard('.input-group-addon');
+        // new Clipboard('.input-group-addon');
 
         // script for data from excel
         const tableBody = document.querySelector("#lines");
@@ -410,9 +431,9 @@
 
         // resize viewer
 
-        document.getElementById("splitter").addEventListener("click", function(e){
+        document.getElementById("wrapper").addEventListener("click", function(e){
             viewer.resize();
-    })
+        })
 
 
     </script>

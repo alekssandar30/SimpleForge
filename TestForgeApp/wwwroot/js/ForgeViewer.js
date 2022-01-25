@@ -23,7 +23,7 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
-                'Autodesk.VisualClusters',
+                // 'Autodesk.VisualClusters',
                 //'Autodesk.ADN.Viewing.Extension.Chart',
                 //'Autodesk.Forge.Samples.VersionChanges',
                 //'LabelsExtension',
@@ -66,8 +66,12 @@ function onDocumentLoadSuccess(doc) {
 
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     viewer.loadDocumentNode(doc, viewables).then(i => {
-        // any additional action here?
         //viewer.loadExtension("NestedViewerExtension", { filter: ["2d"], crossSelection: true })
+        // viewer.loadExtension('Autodesk.VisualClusters', { attribName: 'Material', searchAncestors: true });
+        viewer.loadExtension('Autodesk.VisualClusters');
+
+        // viewer.getExtension('Autodesk.VisualClusters').reset();
+
     });
 
 }
