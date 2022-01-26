@@ -23,6 +23,7 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
+                
                 // 'Autodesk.VisualClusters',
                 //'Autodesk.ADN.Viewing.Extension.Chart',
                 //'Autodesk.Forge.Samples.VersionChanges',
@@ -67,9 +68,56 @@ function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     viewer.loadDocumentNode(doc, viewables).then(i => {
         //viewer.loadExtension("NestedViewerExtension", { filter: ["2d"], crossSelection: true })
-        // viewer.loadExtension('Autodesk.VisualClusters', { attribName: 'Material', searchAncestors: true });
-        viewer.loadExtension('Autodesk.VisualClusters');
-        // viewer.getExtension('Autodesk.VisualClusters').reset();
+
+        const categoryArray = ['Default', 'ZNR_Line Number', 'Material', 'ZNR_Pipe Spec', 'ZNR_SCode', 'ZNR_Zone', 'ZNR_Pipe_Class']
+
+        const selectbox = document.createElement("select");
+        selectbox.name = "ClusterCategories";
+        selectbox.id = "ClusterCategoryId"
+        selectbox.className = 'form-select';
+
+        categoryArray.forEach(val => {
+            const option = document.createElement("option");
+
+            if (val === 'Default') {
+                option.val = null;
+                option.text = 'Default';
+            }
+            else {
+                option.value = val;
+                option.text = val.charAt(0).toUpperCase() + val.slice(1);
+            }
+
+            selectbox.appendChild(option);
+        });
+
+        const label = document.createElement("label");
+        label.innerHTML = "Cluster categories: "
+        label.htmlFor = "ClusterCategories";
+
+        document.getElementById("modelCategories").appendChild(label).appendChild(selectbox);
+
+        selectbox.addEventListener('change', (event) => {
+            if (viewer.getExtension('Autodesk.VisualClusters')) {
+                viewer.getExtension('Autodesk.VisualClusters').reset();
+                viewer.unloadExtension('Autodesk.VisualClusters');
+            }
+            const category = event.target.value;
+
+            if (category !== 'Default') {
+                viewer.loadExtension('Autodesk.VisualClusters',
+                {
+                    attribName: category,
+                    searchAncestors: true
+                });
+            }
+            else {
+                viewer.loadExtension('Autodesk.VisualClusters');
+            }
+            
+        })
+
+        
 
     });
 

@@ -156,6 +156,10 @@
                             </tbody>
                         </table>
                     </div>
+                    <hr />
+                    <div id="modelCategories">
+                        
+                    </div>
     
                 </div>
     
@@ -310,14 +314,17 @@
         </div>
     </div>
 
-    <!-- <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    <script src="js/extensions/ToolbarExtension.js"></script>
+    <script src="js/extensions/VersionChangeExtension.js"></script>
     <!--<script src="https://petrbroz.github.io/forge-viewer-utils/master/Utilities.js"></script>-->
     <!--<script src="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/CustomPropertiesExtension/contents/main.js"></script>-->
+    
+    
     <!--Extensions-->
-    <script src="js/extensions/ToolbarExtension.js"></script>
+    
     <!-- <script src="js/extensions/labelsExtension.js"></script> -->
-    <script src="js/extensions/VersionChangeExtension.js"></script>
+    
     <!-- <script src="js/extensions/ChartExtension.js"></script> -->
     
 
@@ -335,16 +342,15 @@
             cursor: 'col-resize'
         });
 
-        function openNav() {
-            document.getElementById("mySidepanel").style.width = "400px";
-            document.getElementById("mySidepanel").style.visibility = "visible";
-        }
 
-        function closeNav() {
-            document.getElementById("mySidepanel").style.visibility = "hidden"
-            document.getElementById("mySidepanel").style.width = "0px";
-        }
+        // resize viewer
+        document.getElementById("wrapper").addEventListener("click", function (e) {
+            if (viewer) {
+                viewer.resize();
+            }
+        })
 
+        
         function addSearchInput() {
             var cnt = 2;
             var newInput = `
@@ -362,7 +368,6 @@
             searchInputs.children[searchInputs.children.length - 1].remove();
         }
 
-        // new Clipboard('.input-group-addon');
 
         // script for data from excel
         const tableBody = document.querySelector("#lines");
@@ -429,17 +434,9 @@
 
         loadPipes();
 
-        // resize viewer
-
-        document.getElementById("wrapper").addEventListener("click", function(e){
-            viewer.resize();
-        })
-
+        
 
     </script>
-
-
-
 
 
 </body>
