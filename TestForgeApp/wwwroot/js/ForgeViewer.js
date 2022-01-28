@@ -23,7 +23,7 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
-                
+                'Autodesk.BIM360.Minimap',
                 // 'Autodesk.VisualClusters',
                 //'Autodesk.ADN.Viewing.Extension.Chart',
                 //'Autodesk.Forge.Samples.VersionChanges',
@@ -74,7 +74,7 @@ function onDocumentLoadSuccess(doc) {
         const selectbox = document.createElement("select");
         selectbox.name = "ClusterCategories";
         selectbox.id = "ClusterCategoryId"
-        selectbox.className = 'form-select';
+        selectbox.className = 'form-select categorySelect';
 
         categoryArray.forEach(val => {
             const option = document.createElement("option");

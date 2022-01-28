@@ -189,6 +189,7 @@ select {
 
 .zg_line {
     padding: .3rem;
+    cursor: pointer;
 }
 
 .zg_line:hover {
@@ -205,4 +206,8 @@ select {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.categorySelect {
+    width: 100%;
 }
