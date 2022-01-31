@@ -68,6 +68,14 @@ function onDocumentLoadSuccess(doc) {
     //var viewables = (viewableId ? doc.getRoot().findByGuid(viewableId) : doc.getRoot().getDefaultGeometry());
     viewer.loadDocumentNode(doc, viewables).then(i => {
         //viewer.loadExtension("NestedViewerExtension", { filter: ["2d"], crossSelection: true })
+        const modelCategories = document.getElementById("modelCategories");
+        viewer.loadExtension('Autodesk.VisualClusters');
+
+        if (modelCategories.hasChildNodes()) {
+            modelCategories.childNodes.forEach((child) => {
+                modelCategories.removeChild(child);
+            })
+        }
 
         const categoryArray = ['Default', 'ZNR_Line Number', 'Material', 'ZNR_Pipe Spec', 'ZNR_SCode', 'ZNR_Zone', 'ZNR_Pipe_Class']
 
@@ -80,7 +88,7 @@ function onDocumentLoadSuccess(doc) {
             const option = document.createElement("option");
 
             if (val === 'Default') {
-                option.val = null;
+                option.val = val;
                 option.text = 'Default';
             }
             else {
@@ -95,7 +103,11 @@ function onDocumentLoadSuccess(doc) {
         label.innerHTML = "Cluster categories: "
         label.htmlFor = "ClusterCategories";
 
-        document.getElementById("modelCategories").appendChild(label).appendChild(selectbox);
+        modelCategories.appendChild(label).appendChild(selectbox);
+        //if (modelCategories.childNodes.length === 1) {
+        //    modelCategories.appendChild(label).appendChild(selectbox);
+        //}
+       
 
         selectbox.addEventListener('change', (event) => {
             if (viewer.getExtension('Autodesk.VisualClusters')) {
@@ -106,14 +118,16 @@ function onDocumentLoadSuccess(doc) {
 
             if (category !== 'Default') {
                 viewer.loadExtension('Autodesk.VisualClusters',
-                {
-                    attribName: category,
-                    searchAncestors: true
-                });
+                    {
+                        attribName: category,
+                        searchAncestors: true
+                    });
+                return;
             }
             else {
                 viewer.loadExtension('Autodesk.VisualClusters');
             }
+            
             
         })
 
