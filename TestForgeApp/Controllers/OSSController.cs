@@ -23,6 +23,7 @@ namespace TestForgeApp.Controllers
         public OSSController(IWebHostEnvironment env) { _env = env; }
         public string ClientId { get { return AppSettings.GetAppSetting("FORGE_CLIENT_ID").ToLower(); } }
         private static Random random = new Random();
+        //private static string FILE_PATH = @"D:\Posao\TestForgeApp\TestForgeApp\TestForgeApp\wwwroot\Uploads\UCB-B7-M-SANI-ZAT_detached_21.07.05.rvt";
 
         private const int UPLOAD_CHUNK_SIZE = 5; // Mb
 
@@ -99,6 +100,12 @@ namespace TestForgeApp.Controllers
 
             using (var stream = new FileStream(fileSavePath, FileMode.Create))
                 await input.fileToUpload.CopyToAsync(stream);
+
+            //string fileSavePath = FILE_PATH;
+            //string objectName = "UCB-B7-M-SANI-ZAT_detached_21.07.05.rvt";
+
+            //if (!System.IO.File.Exists(fileSavePath))
+            //    fileSavePath = @"..\..\..\" + FILE_PATH;
 
             long fileSize = (new FileInfo(fileSavePath)).Length;
          
