@@ -23,7 +23,7 @@ function launchViewer(urn) {
                 'Autodesk.DocumentBrowser',
                 'Autodesk.Viewing.MarkupsCore',
                 'Autodesk.Viewing.MarkupsGui',
-                'Autodesk.BIM360.Minimap',
+                'SummaryChartExtension',
                 // 'Autodesk.VisualClusters',
                 //'Autodesk.ADN.Viewing.Extension.Chart',
                 //'Autodesk.Forge.Samples.VersionChanges',

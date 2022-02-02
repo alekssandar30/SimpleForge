@@ -1,7 +1,7 @@
-﻿/////////////////////////////////////////////////////////////////////
-// Copyright (c) Autodesk, Inc. All rights reserved
-// Written by Forge Partner Development
-
+﻿/*
+This code will adjust the page layout, watch the Viewer and load the charts when the model 
+date is loaded. It uses JavaScript classes.
+*/
 
 $(document).ready(function () {
     $(document).on('DOMNodeInserted', function (e) {
@@ -9,11 +9,9 @@ $(document).ready(function () {
             // here, viewer represents the variable defined at viewer initialization
             if (viewer === null || viewer === undefined) return;
             new Dashboard(viewer, [
-                new BarChart('Type Name'),
-                new PieChart('Family Name')
+                new BarChart('Material'),
+                new PieChart('Material')
             ])
-            
-            
         }
     });
 })

@@ -211,3 +211,12 @@ select {
 .categorySelect {
     width: 100%;
 }
+
+/** Dashboard css **/
+
+#summary-chart-btn {
+    background-image: url(https://img.icons8.com/dusk/64/000000/doughnut-chart.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

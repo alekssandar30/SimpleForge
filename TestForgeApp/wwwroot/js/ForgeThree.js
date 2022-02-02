@@ -98,7 +98,7 @@
 
                 $.ajax({
                     url: `/api/uploadModel`,
-                    // url: 'api/forge/oss/objects',
+                     //url: 'api/forge/oss/objects',
                     data: formData,
                     processData: false,
                     contentType: false,
